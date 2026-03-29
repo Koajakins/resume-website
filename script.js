@@ -22,7 +22,7 @@ document.getElementById('year').textContent = new Date().getFullYear();
 // ─── Email assembly ───────────────────────────────────────────────────────────
 
 (function () {
-  const email = ['thomashaggath', 'protonmail.com'].join('@');
+  const email = ['tom', 'haggath.re'].join('@');
   document.querySelectorAll('[data-email-link]').forEach(el => {
     el.href = 'mailto:' + email;
   });

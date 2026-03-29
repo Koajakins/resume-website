@@ -17,7 +17,12 @@
       "WebFetch(domain:universitycompare.com)",
       "WebFetch(domain:goingto.university)",
       "WebFetch(domain:intranetsp.bournemouth.ac.uk)",
-      "WebFetch(domain:youapply.com)"
+      "WebFetch(domain:youapply.com)",
+      "Bash(nslookup haggath.re)",
+      "Bash(nslookup www.haggath.re)",
+      "Bash(curl -sI https://www.haggath.re)",
+      "Bash(nslookup -type=SOA haggath.re)",
+      "Bash(curl -sI -4 https://www.haggath.re)"
     ]
   }
 }
