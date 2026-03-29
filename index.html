@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Thomas Haggath — Senior Cloud Security Engineer</title>
+  <meta name="description" content="AWS Cloud Security Engineer specialising in incident response, GuardDuty, and detection engineering. Open to U.S. roles, visa sponsorship available.">
+  <meta name="author" content="Thomas Haggath">
+  <meta name="robots" content="index, follow">
+  <meta name="keywords" content="AWS security engineer, cloud security engineer, incident response, GuardDuty, detection engineering, H-1B sponsorship, relocation, Splunk, Terraform, IAM">
+  <meta name="theme-color" content="#0f172a">
+
+  <link rel="canonical" href="https://www.haggath.re/">
+
+  <meta property="og:type"        content="profile">
+  <meta property="og:title"       content="Thomas Haggath — Senior Cloud Security Engineer">
+  <meta property="og:description" content="AWS Cloud Security Engineer specialising in incident response, GuardDuty, and detection engineering. Open to U.S. roles, visa sponsorship available.">
+  <meta property="og:url"         content="https://www.haggath.re">
+  <meta property="og:locale"           content="en_GB">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="profile:first_name" content="Thomas">
+  <meta property="profile:last_name"  content="Haggath">
+  <meta property="og:image"        content="https://www.haggath.re/profile.jpg">
+  <meta property="og:image:width"  content="400">
+  <meta property="og:image:height" content="400">
+  <meta property="og:image:alt"    content="Thomas Haggath, Senior Cloud Security Engineer">
+
+  <meta name="twitter:card"        content="summary">
+  <meta name="twitter:site"        content="@Koalatyyy">
+  <meta name="twitter:creator"     content="@Koalatyyy">
+  <meta name="twitter:title"       content="Thomas Haggath — Senior Cloud Security Engineer">
+  <meta name="twitter:description" content="Senior Cloud Security Engineer specialising in AWS incident response, GuardDuty, CloudTrail, and detection engineering.">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Thomas Haggath",
+      "jobTitle": "Senior Cloud Security Engineer",
+
+      "url": "https://www.haggath.re",
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "Wiltshire",
+        "addressCountry": "GB"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/thomas-haggath/",
+        "https://twitter.com/Koalatyyy"
+      ],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Amazon Web Services",
+        "url": "https://aws.amazon.com"
+      },
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Bournemouth University"
+      },
+      "hasCredential": [
+        { "@type": "EducationalOccupationalCredential", "name": "BSc Digital Forensics and Cyber Security" },
+        { "@type": "EducationalOccupationalCredential", "name": "Security Incident Response Subject Matter Expert" },
+        { "@type": "EducationalOccupationalCredential", "name": "Patch Management Subject Matter Expert" },
+        { "@type": "EducationalOccupationalCredential", "name": "Splunk Fundamentals" },
+        { "@type": "EducationalOccupationalCredential", "name": "AWS Partner: Generative AI Essentials" }
+      ],
+      "knowsAbout": [
+        "AWS Cloud Security", "Incident Response", "Detection Engineering",
+        "CloudTrail", "GuardDuty", "AWS Security Hub", "Amazon Macie",
+        "IAM", "KMS", "VPC Flow Logs", "AWS Config", "Control Tower",
+        "SIEM", "Splunk", "Python", "Terraform", "NIST 800-61",
+        "CrowdStrike", "Vulnerability Management", "Threat Detection"
+      ]
+    }
+  }
+  </script>
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="manifest.json">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <script async src="https://plausible.io/js/pa-VZN94awKhzfObpP4SDVGg.js"></script>
+  <script>
+    window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+    plausible.init()
+  </script>
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Skip to content</a>
+  <div id="progress-bar" aria-hidden="true"></div>
+
+  <header id="navbar">
+    <nav class="nav-inner">
+      <a href="#hero" class="nav-logo" aria-label="Home">TH</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" id="themeToggle" aria-label="Switch to light mode">
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="5"/>
+          <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <a href="Thomas_Haggath-Resume-Chicago-IL.pdf" download class="btn btn-outline btn-sm nav-cta">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+          <polyline points="7 10 12 15 17 10"/>
+          <line x1="12" y1="15" x2="12" y2="3"/>
+        </svg>
+        Download <span class="cv-term">CV</span>
+      </a>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <section id="hero">
+      <div class="container hero-content">
+        <div class="hero-text">
+          <div class="otw-badge">
+            <span class="otw-dot"></span>
+            Open to U.S. relocation
+          </div>
+          <p class="hero-greeting">Hi, I'm</p>
+          <h1 class="hero-name">Thomas Haggath</h1>
+          <h2 class="hero-title"><span id="typed-text"></span><span class="typed-cursor" aria-hidden="true"></span></h2>
+          <p class="hero-bio">
+            Specialising in AWS security incident response and detection engineering across
+            multi-account enterprise environments. I drive incidents from signal to containment
+            using CloudTrail, GuardDuty, and purpose-built Python automation.
+          </p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">Get in Touch</a>
+            <a href="Thomas_Haggath-Resume-Chicago-IL.pdf" download class="btn btn-outline">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+              Download <span class="cv-term">CV</span>
+            </a>
+          </div>
+          <div class="hero-socials">
+            <a href="https://www.linkedin.com/in/thomas-haggath/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+            </a>
+            <a href="https://x.com/Koalatyyy" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.748l7.73-8.835L1.254 2.25H8.08l4.259 5.622 5.905-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+            <a href="#" data-email-link aria-label="Email">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="4" width="20" height="16" rx="2"/>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="hero-photo">
+          <img src="profile.jpg" alt="Thomas Haggath, Senior Cloud Security Engineer" class="profile-img" loading="lazy">
+        </div>
+      </div>
+      <div class="hero-scroll-hint" aria-hidden="true">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 12 15 18 9"/>
+        </svg>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title">About</h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              I'm a Senior Cloud Security Engineer with <strong>6+ years of experience</strong> specialising
+              in AWS security incident response and detection engineering across multi-account enterprise
+              environments. I lead complex investigations into IAM abuse, anomalous API activity, and
+              credential compromise — leveraging CloudTrail, GuardDuty, and VPC Flow Logs to drive
+              incidents from signal to containment.
+            </p>
+            <p>
+              I've designed automation to enrich GuardDuty findings with contextual IAM metadata,
+              deployed AWS Security Hub and Macie in regulated environments, and authored incident
+              response runbooks that enable consistent response under pressure. Most recently I built
+              AI-assisted operational tooling that cut process time by 45% while maintaining
+              strict data-protection controls.
+            </p>
+            <p>
+              Based in <strong>Wiltshire, UK</strong>, I'm actively pursuing U.S. security engineering
+              opportunities and am open to visa sponsorship (H-1B or L-1).
+            </p>
+          </div>
+          <div class="about-stats">
+            <div class="stat-card">
+              <span class="stat-number">6+</span>
+              <span class="stat-label">Years Experience</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">4</span>
+              <span class="stat-label">Roles at AWS</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">94%</span>
+              <span class="stat-label">Config Compliance Achieved</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">45%</span>
+              <span class="stat-label">Process Time Reduction</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">SME</span>
+              <span class="stat-label">Security Incident Response</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">SME</span>
+              <span class="stat-label">Patch Management</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="container">
+        <h2 class="section-title">Experience</h2>
+        <div class="timeline">
+
+          <article class="timeline-item">
+            <div class="timeline-header">
+              <div class="timeline-title-group">
+                <h3 class="job-title">Cloud Support Engineer II</h3>
+                <p class="company-line">
+                  <span class="company-name">Amazon Web Services</span>
+                  <span class="company-location">Managed Services</span>
+                </p>
+              </div>
+              <time class="date-range">Dec 2024 — Present</time>
+            </div>
+            <ul class="job-bullets">
+              <li>Lead investigation and containment of AWS security incidents across public-sector environments, reconstructing activity using CloudTrail, GuardDuty, VPC Flow Logs, IAM data, and SIEM telemetry.</li>
+              <li>Deploy and operationalize AWS Security Hub and Macie in regulated environments, aligning controls to NIST standards and strengthening audit outcomes.</li>
+              <li>Design and implement Python-based automation to enrich GuardDuty findings with contextual IAM and account metadata, reducing manual triage effort and accelerating investigation workflows.</li>
+              <li>Execute containment actions including IAM policy tightening, credential/session revocation, encryption hardening (KMS), and configuration drift remediation.</li>
+              <li>Author and evolve incident response runbooks for IAM misuse, detection workflows, and logging investigations, reducing escalation dependency.</li>
+              <li>Built AI-assisted operational automation with embedded data-protection guardrails, reducing process time by 45% while maintaining sensitive data controls.</li>
+            </ul>
+            <div class="tag-list">
+              <span class="tag">CloudTrail</span>
+              <span class="tag">GuardDuty</span>
+              <span class="tag">Security Hub</span>
+              <span class="tag">Macie</span>
+              <span class="tag">Python</span>
+              <span class="tag">KMS</span>
+              <span class="tag">NIST 800-61</span>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-header">
+              <div class="timeline-title-group">
+                <h3 class="job-title">Information Security Compliance Analyst</h3>
+                <p class="company-line">
+                  <span class="company-name">InfoSum Ltd</span>
+                  <span class="company-location">Remote</span>
+                </p>
+              </div>
+              <time class="date-range">Mar 2024 — Dec 2024</time>
+            </div>
+            <ul class="job-bullets">
+              <li>Raised AWS Config compliance from 68% to 94% by tuning controls, prioritizing remediation with engineering, and aligning accepted risk decisions.</li>
+              <li>Developed Splunk dashboards to analyze authentication and network access patterns by geography, enabling infrastructure changes to reduce high-risk exposure.</li>
+              <li>Assessed security findings using AWS Security Hub, AWS Config, and NIST 800-61 guidelines, coordinating remediation with engineering teams to improve monitoring maturity and cut repeat control failures.</li>
+              <li>Automated AWS Config conformance reporting using Python, accelerating identification of non-compliance and reducing manual review overhead.</li>
+            </ul>
+            <div class="tag-list">
+              <span class="tag">AWS Config</span>
+              <span class="tag">Security Hub</span>
+              <span class="tag">Splunk</span>
+              <span class="tag">Python</span>
+              <span class="tag">NIST 800-61</span>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-header">
+              <div class="timeline-title-group">
+                <h3 class="job-title">Cloud Support Engineer II</h3>
+                <p class="company-line">
+                  <span class="company-name">Amazon Web Services</span>
+                  <span class="company-location">Managed Services</span>
+                </p>
+              </div>
+              <time class="date-range">Dec 2021 — Mar 2024</time>
+            </div>
+            <ul class="job-bullets">
+              <li>Served as the primary escalation point for detection-driven AWS security incidents, leading investigations of IAM activity, anomalous API behavior, and VPC-level indicators using CloudTrail, CloudWatch Logs, and AWS Config.</li>
+              <li>Tuned and engineered GuardDuty automation to reduce false positives and improve signal fidelity across multi-account customer environments.</li>
+              <li>Led customer migrations into AWS using Control Tower and Landing Zone Accelerator, deploying secure landing zones with centralized logging, IAM guardrails, and KMS encryption defaults — reducing misconfigurations and accelerating secure delivery by 60%.</li>
+              <li>Integrated endpoint telemetry (CrowdStrike, Trend Micro IPS/IDS) into operational investigations, strengthening correlation between cloud and workload-level signals.</li>
+            </ul>
+            <div class="tag-list">
+              <span class="tag">GuardDuty</span>
+              <span class="tag">CloudTrail</span>
+              <span class="tag">IAM</span>
+              <span class="tag">Control Tower</span>
+              <span class="tag">KMS</span>
+              <span class="tag">CrowdStrike</span>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-header">
+              <div class="timeline-title-group">
+                <h3 class="job-title">Cloud Support Engineer I</h3>
+                <p class="company-line">
+                  <span class="company-name">Amazon Web Services</span>
+                  <span class="company-location">Managed Services</span>
+                </p>
+              </div>
+              <time class="date-range">Jul 2020 — Dec 2021</time>
+            </div>
+            <ul class="job-bullets">
+              <li>Established a Security Incident Response SME program enabling structured, repeatable incident handling without elevated credentials — reducing containment time by 45% and lowering escalation volume.</li>
+              <li>Enhanced investigation workflows by enriching automation with IAM activity and CloudTrail context to support faster evidence-based decisions.</li>
+              <li>Delivered training and enablement for engineers pursuing Security Incident Response SME accreditation, improving on-call readiness and response consistency.</li>
+            </ul>
+            <div class="tag-list">
+              <span class="tag">AWS</span>
+              <span class="tag">IAM</span>
+              <span class="tag">CloudTrail</span>
+              <span class="tag">Patch Management</span>
+              <span class="tag">Training</span>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-header">
+              <div class="timeline-title-group">
+                <h3 class="job-title">Cloud Support Associate</h3>
+                <p class="company-line">
+                  <span class="company-name">Amazon Web Services</span>
+                  <span class="company-location">Managed Services</span>
+                </p>
+              </div>
+              <time class="date-range">Jun 2019 — Jul 2020</time>
+            </div>
+            <ul class="job-bullets">
+              <li>Resolved security-related customer incidents across alerting, change management, and backlog remediation, reducing resolution time by 30%.</li>
+              <li>Coordinated across security response stakeholders to improve time-to-acknowledge and investigation quality across support queues.</li>
+            </ul>
+            <div class="tag-list">
+              <span class="tag">AWS</span>
+              <span class="tag">Incident Response</span>
+              <span class="tag">Change Management</span>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-header">
+              <div class="timeline-title-group">
+                <h3 class="job-title">Software Tester Intern</h3>
+                <p class="company-line">
+                  <span class="company-name">Evidence Talks Ltd (CCL Group)</span>
+                  <span class="company-location">Milton Keynes, UK</span>
+                </p>
+              </div>
+              <time class="date-range">Aug 2017 — Aug 2018</time>
+            </div>
+            <ul class="job-bullets">
+              <li>Executed functional and regression testing of digital forensics products using test-case management tools, confirming usability and stability.</li>
+              <li>Built Selenium (C#)-based automated UI tests to increase test coverage and repeatability.</li>
+              <li>Supported penetration testing activities to identify product security risks and report findings to the team.</li>
+            </ul>
+            <div class="tag-list">
+              <span class="tag">Selenium / C#</span>
+              <span class="tag">Digital Forensics</span>
+              <span class="tag">Penetration Testing</span>
+              <span class="tag">QA</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-grid">
+
+          <div class="skill-group">
+            <h3 class="skill-group-label">Cloud Security (AWS)</h3>
+            <div class="tag-list">
+              <span class="tag">CloudTrail</span>
+              <span class="tag">GuardDuty</span>
+              <span class="tag">Security Hub</span>
+              <span class="tag">Macie</span>
+              <span class="tag">IAM</span>
+              <span class="tag">KMS</span>
+              <span class="tag">VPC Flow Logs</span>
+              <span class="tag">AWS Config</span>
+              <span class="tag">Control Tower</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <h3 class="skill-group-label">Detection &amp; Incident Response</h3>
+            <div class="tag-list">
+              <span class="tag">Alert Triage</span>
+              <span class="tag">Containment</span>
+              <span class="tag">Root Cause Analysis</span>
+              <span class="tag">Evidence Capture</span>
+              <span class="tag">NIST 800-61</span>
+              <span class="tag">Runbook Authoring</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <h3 class="skill-group-label">Monitoring &amp; SIEM</h3>
+            <div class="tag-list">
+              <span class="tag">Splunk (SPL)</span>
+              <span class="tag">CloudWatch</span>
+              <span class="tag">EventBridge</span>
+              <span class="tag">Log Analysis</span>
+              <span class="tag">Correlation</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <h3 class="skill-group-label">Automation &amp; Scripting</h3>
+            <div class="tag-list">
+              <span class="tag">Python</span>
+              <span class="tag">PowerShell</span>
+              <span class="tag">Bash</span>
+              <span class="tag">Terraform</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <h3 class="skill-group-label">Security Tooling</h3>
+            <div class="tag-list">
+              <span class="tag">CrowdStrike</span>
+              <span class="tag">Trend Micro IPS/IDS</span>
+              <span class="tag">Nessus</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <h3 class="skill-group-label">Vulnerability &amp; Risk</h3>
+            <div class="tag-list">
+              <span class="tag">Vulnerability Management</span>
+              <span class="tag">Patch Management</span>
+              <span class="tag">Risk Management</span>
+              <span class="tag">Compliance Reporting</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="container">
+        <h2 class="section-title">Education &amp; Certifications</h2>
+        <div class="edu-list">
+
+          <article class="edu-card">
+            <div class="edu-header">
+              <div>
+                <h3 class="edu-degree">BSc (Hons) Digital Forensics and Cyber Security</h3>
+                <p class="edu-institution">Bournemouth University</p>
+              </div>
+              <time class="date-range">2015 — 2019</time>
+            </div>
+            <p class="edu-detail">Bournemouth, UK &middot; Interdisciplinary programme combining technical IT security with forensic investigation, spanning ethical hacking and digital evidence handling - with collaborative study across the Law department. Modules included: Digital Forensics, Ethical Hacking &amp; Countermeasures, Networking, Systems Design, Software Programming (Java, Python)</p>
+          </article>
+
+          <article class="edu-card">
+            <div class="edu-header">
+              <div>
+                <h3 class="edu-degree">Certifications &amp; Accreditations</h3>
+                <p class="edu-institution">Various</p>
+              </div>
+            </div>
+            <div class="tag-list">
+              <span class="tag">Security Incident Response SME</span>
+              <span class="tag">Patch Management SME</span>
+              <span class="tag">Monitoring Bar Raiser</span>
+              <span class="tag">Splunk Fundamentals</span>
+              <span class="tag">AWS Partner: Generative AI Essentials</span>
+              <span class="tag">Azure Cloud Fundamentals</span>
+              <span class="tag">IT Security Foundations: Network Security</span>
+              <span class="tag">Active Directory Administration</span>
+              <span class="tag">AMS Builder Award</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container contact-content">
+        <h2 class="section-title">Get in Touch</h2>
+        <p class="contact-intro">
+          I'm actively pursuing U.S. cloud security engineering opportunities. H-1B and L-1
+          visa sponsorship considered. Based in the UK and ready to relocate — if you have a
+          role in mind or just want to connect, my inbox is open.
+        </p>
+        <div class="contact-links">
+          <div class="email-row">
+            <a href="#" data-email-link class="contact-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="4" width="20" height="16" rx="2"/>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+              </svg>
+              <span data-email-display></span>
+            </a>
+            <button class="copy-btn" data-email-copy aria-label="Copy email address">
+              <svg class="icon-copy" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+              </svg>
+              <svg class="icon-check" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </button>
+          </div>
+          <a href="https://www.linkedin.com/in/thomas-haggath/" target="_blank" rel="noopener noreferrer" class="contact-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+            LinkedIn
+          </a>
+          <a href="https://x.com/Koalatyyy" target="_blank" rel="noopener noreferrer" class="contact-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.748l7.73-8.835L1.254 2.25H8.08l4.259 5.622 5.905-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+            X / Twitter
+          </a>
+          <a class="contact-link contact-link--static">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+            Wiltshire, UK &middot; Targeting US relocation
+          </a>
+        </div>
+        <form id="contact-form" novalidate>
+          <input type="hidden" name="subject" value="New contact from haggath.re">
+          <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off">
+          <div class="form-group">
+            <label for="contact-name">Name</label>
+            <input type="text" id="contact-name" name="name" required autocomplete="name" placeholder="Your name">
+          </div>
+          <div class="form-group">
+            <label for="contact-email">Email</label>
+            <input type="email" id="contact-email" name="email" required autocomplete="email" placeholder="your@email.com">
+          </div>
+          <div class="form-group">
+            <label for="contact-message">Message</label>
+            <textarea id="contact-message" name="message" required rows="5" placeholder="What's on your mind?"></textarea>
+          </div>
+          <div class="form-status" id="form-status" hidden></div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+        <a href="Thomas_Haggath-Resume-Chicago-IL.pdf" download class="btn btn-primary btn-lg">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          Download Full <span class="cv-term">CV</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <p>Designed &amp; built by <strong>Thomas Haggath</strong></p>
+      <p class="footer-note">&copy; <span id="year"></span> &middot; All rights reserved</p>
+    </div>
+  </footer>
+
+  <div id="cmdPalette" class="cmd-palette">
+    <div class="cmd-backdrop" id="cmdBackdrop"></div>
+    <div class="cmd-modal" role="dialog" aria-modal="true" aria-label="Command palette">
+      <div class="cmd-search-row">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <input id="cmdInput" type="text" placeholder="Go to..." autocomplete="off" spellcheck="false">
+        <span class="cmd-kbd">esc</span>
+      </div>
+      <ul id="cmdList" class="cmd-list">
+        <li class="cmd-group-label">Navigate</li>
+        <li class="cmd-item" data-href="#about">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>About
+        </li>
+        <li class="cmd-item" data-href="#experience">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Experience
+        </li>
+        <li class="cmd-item" data-href="#skills">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>Skills
+        </li>
+        <li class="cmd-item" data-href="#education">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Education
+        </li>
+        <li class="cmd-item" data-href="#contact">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>Contact
+        </li>
+        <li class="cmd-group-label">Actions</li>
+        <li class="cmd-item" data-action="download">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Download <span class="cv-term">CV</span>
+        </li>
+        <li class="cmd-item" data-action="email">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copy Email
+        </li>
+        <li class="cmd-item" data-action="top">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>Back to Top
+        </li>
+        <li class="cmd-empty" id="cmdEmpty" hidden>No results</li>
+      </ul>
+    </div>
+  </div>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <polyline points="18 15 12 9 6 15"/>
+    </svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>

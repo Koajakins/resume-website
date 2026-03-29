@@ -1,0 +1,36 @@
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Update sitemap lastmod
+        run: |
+          TODAY=$(date -u +%Y-%m-%d)
+          sed -i "s|<lastmod>.*</lastmod>|<lastmod>$TODAY</lastmod>|" sitemap.xml
+
+      - name: Deploy to OVH via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./
+          server-dir: /www/
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/.github/**
+            **/CLAUDE.md
+            **/.htaccess
+
+      - name: Ping IndexNow
+        run: |
+          curl -s "https://api.indexnow.org/indexnow?url=https://www.haggath.re/&key=97dad8073f95443d944e286b8cf22bb8"

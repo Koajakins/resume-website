@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -sv https://www.haggath.re/)",
+      "Bash(openssl s_client -connect www.haggath.re:443 -servername www.haggath.re)",
+      "Bash(openssl s_client -connect haggath.re:443 -servername haggath.re)",
+      "Bash(openssl x509:*)",
+      "WebFetch(domain:www.bournemouth.ac.uk)",
+      "WebSearch",
+      "WebFetch(domain:discoveruni.gov.uk)",
+      "WebFetch(domain:digital.ucas.com)",
+      "WebFetch(domain:www.theuniguide.co.uk)",
+      "WebFetch(domain:www.ucas.com)",
+      "WebFetch(domain:coursefindr.co.uk)",
+      "WebFetch(domain:www.whatuni.com)",
+      "WebFetch(domain:studylink.com)",
+      "WebFetch(domain:universitycompare.com)",
+      "WebFetch(domain:goingto.university)",
+      "WebFetch(domain:intranetsp.bournemouth.ac.uk)",
+      "WebFetch(domain:youapply.com)"
+    ]
+  }
+}
