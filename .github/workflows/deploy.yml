@@ -61,7 +61,7 @@ jobs:
 
       - name: Uptime check
         run: |
-          STATUS=$(curl -s -o /dev/null -w "%{http_code}" https://www.haggath.re)
+          STATUS=$(curl -s -o /dev/null -w "%{http_code}" -A "Mozilla/5.0 (compatible; UptimeCheck/1.0)" https://www.haggath.re)
           if [ "$STATUS" != "200" ]; then
             echo "Site returned HTTP $STATUS — deploy may have failed"
             exit 1
