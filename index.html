@@ -87,7 +87,8 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
   <link rel="stylesheet" href="style.css">
 
   <script async src="https://plausible.io/js/pa-VZN94awKhzfObpP4SDVGg.js"></script>
@@ -195,7 +196,7 @@
         <div class="hero-photo">
           <picture>
             <source srcset="profile.webp" type="image/webp">
-            <img src="profile.jpg" alt="Thomas Haggath, Senior AWS Cloud Engineer" class="profile-img" loading="eager" fetchpriority="high">
+            <img src="profile.jpg" alt="Thomas Haggath, Senior AWS Cloud Engineer" class="profile-img" loading="eager" fetchpriority="high" width="216" height="216">
           </picture>
         </div>
       </div>
@@ -655,7 +656,7 @@
         </div>
         <form id="contact-form" novalidate>
           <input type="hidden" name="subject" value="New contact from haggath.re">
-          <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off">
+          <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off" aria-hidden="true">
           <div class="form-group">
             <label for="contact-name">Name</label>
             <input type="text" id="contact-name" name="name" required autocomplete="name" placeholder="Your name">
