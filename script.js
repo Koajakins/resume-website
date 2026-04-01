@@ -85,7 +85,7 @@ document.querySelector('.nav-logo').addEventListener('click', e => {
 // ─── Typed text animation ─────────────────────────────────────────────────────
 
 const typedEl  = document.getElementById('typed-text');
-const phrases  = ['Senior Cloud Security Engineer', 'AWS Incident Responder', 'Detection Engineer'];
+const phrases  = ['Senior AWS Cloud Engineer', 'AWS Incident Responder', 'Detection Engineer'];
 let phraseIdx  = 0;
 let charIdx    = 0;
 let deleting   = false;
