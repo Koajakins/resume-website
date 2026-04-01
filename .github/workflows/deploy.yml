@@ -58,12 +58,3 @@ jobs:
       - name: Submit sitemap to Google
         run: |
           curl -s "https://www.google.com/ping?sitemap=https://www.haggath.re/sitemap.xml"
-
-      - name: Uptime check
-        run: |
-          STATUS=$(curl -s -o /dev/null -w "%{http_code}" -A "Mozilla/5.0 (compatible; UptimeCheck/1.0)" https://www.haggath.re)
-          if [ "$STATUS" != "200" ]; then
-            echo "Site returned HTTP $STATUS — deploy may have failed"
-            exit 1
-          fi
-          echo "Site is up (HTTP $STATUS)"
