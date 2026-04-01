@@ -335,6 +335,8 @@ function activateItem(item) {
     document.querySelector('.copy-btn').click();
   } else if (action === 'top') {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  } else if (action === 'terminal') {
+    termToggle.click();
   }
 }
 
@@ -368,6 +370,21 @@ cmdInput.addEventListener('input', () => filterItems(cmdInput.value));
 cmdBackdrop.addEventListener('click', closePalette);
 cmdList.querySelectorAll('.cmd-item').forEach(item => {
   item.addEventListener('click', () => activateItem(item));
+});
+
+// ─── Terminal toggle ──────────────────────────────────────────────────────────
+
+const termToggle  = document.getElementById('termToggle');
+const termSection = document.getElementById('terminal');
+
+termToggle.addEventListener('click', e => {
+  e.preventDefault();
+  const opening = termSection.hidden;
+  termSection.hidden = !opening;
+  if (opening) {
+    termSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    document.getElementById('term-input')?.focus();
+  }
 });
 
 // ─── Terminal ─────────────────────────────────────────────────────────────────
