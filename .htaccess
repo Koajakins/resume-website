@@ -1,3 +1,5 @@
+ErrorDocument 404 /404.html
+
 # Cache static assets
 <FilesMatch "\.(webp|jpg|jpeg|png|svg|ico|pdf)$">
   Header set Cache-Control "public, max-age=31536000, immutable"
