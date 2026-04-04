@@ -283,7 +283,7 @@ section {
   flex: 1;
   display: grid;
   grid-template-columns: 1fr auto;
-  gap: 2rem;
+  gap: 3rem;
   align-items: center;
   padding-block: 4rem;
 }
@@ -326,32 +326,7 @@ section {
   color: var(--text-muted);
   font-size: 1.0625rem;
   line-height: 1.75;
-  margin-bottom: 1rem;
-}
-
-.hero-teaser {
-  max-width: 520px;
-  color: var(--text-subtle);
-  font-size: 0.9375rem;
   margin-bottom: 2.25rem;
-}
-
-.hero-term-link {
-  color: var(--accent);
-  border-bottom: 1px solid transparent;
-  transition: border-color var(--ease);
-}
-
-.hero-term-link:hover {
-  border-bottom-color: var(--accent);
-}
-
-.hero-teaser code {
-  font-size: 0.875rem;
-  color: var(--text-muted);
-  background: var(--surface);
-  padding: 0.1em 0.4em;
-  border-radius: 3px;
 }
 
 .hero-actions {
@@ -995,20 +970,6 @@ footer {
     transform: none;
     transition: none;
   }
-
-  .typed-cursor {
-    animation: none;
-    opacity: 1;
-  }
-
-  .otw-dot {
-    animation: none;
-  }
-
-  .hero-scroll-hint {
-    animation: none;
-    opacity: 0;
-  }
 }
 
 .edu-card .tag-list {
@@ -1497,13 +1458,8 @@ footer {
 
   .hero-title,
   .hero-bio,
-  .hero-teaser,
   .hero-greeting {
     color: #333 !important;
-  }
-
-  .hero-teaser {
-    display: none;
   }
 
   .section-title {
