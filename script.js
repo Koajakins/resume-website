@@ -433,19 +433,20 @@ document.querySelectorAll('.hero-term-link').forEach(el => {
       return [
         { text: 'Thomas Haggath' },
         { text: 'Senior AWS Cloud Engineer' },
-        { text: '6+ years · Security incident response & detection engineering' },
+        { text: '7+ years · Security incident response & detection engineering' },
         { text: 'Wiltshire, UK — targeting U.S. relocation' },
         { text: 'Open to H-1B / L-1 sponsorship', cls: 'term-ok' },
       ];
     },
     skills() {
       return [
-        { text: 'Cloud:      CloudTrail, GuardDuty, Security Hub, Macie, IAM, KMS' },
-        { text: 'SIEM:       Splunk, Splunk Cloud Enterprise' },
-        { text: 'IaC:        Terraform' },
-        { text: 'Languages:  Python, Bash' },
-        { text: 'Standards:  NIST 800-61, ISO 27001' },
-        { text: 'Other:      CrowdStrike, Control Tower, VPC Flow Logs' },
+        { text: 'Cloud (AWS):   CloudTrail, GuardDuty, Security Hub, Macie, IAM, KMS' },
+        { text: '               VPC Flow Logs, AWS Config, Control Tower' },
+        { text: 'Detection/IR:  Alert Triage, Containment, RCA, NIST 800-61, Runbooks' },
+        { text: 'Monitoring:    Splunk (SPL), CloudWatch, EventBridge, Log Analysis' },
+        { text: 'Automation:    Python, PowerShell, Bash, Terraform' },
+        { text: 'Tooling:       CrowdStrike, Trend Micro IPS/IDS, Nessus' },
+        { text: 'Vuln & Risk:   Vulnerability Management, Patch Management, Compliance' },
       ];
     },
     experience() {
@@ -460,12 +461,14 @@ document.querySelectorAll('.hero-term-link').forEach(el => {
     },
     projects() {
       return [
-        { text: 'PacketTracer  github.com/Koajakins/PacketTracer' },
-        { text: '              Real-time packet capture with topology visualisation', cls: 'term-muted' },
-        { text: 'A-LiME        github.com/Koajakins/A-LiME' },
-        { text: '              Automated Linux memory extraction tooling', cls: 'term-muted' },
-        { text: 'haggath.re    haggath.re' },
-        { text: '              This site', cls: 'term-muted' },
+        { text: 'SecurityObservatory  github.com/Koajakins/aws-security-siem' },
+        { text: '                     AI-powered threat detection across 12+ AWS services', cls: 'term-muted' },
+        { text: 'PacketTracer         github.com/Koajakins/PacketTracer' },
+        { text: '                     Real-time packet capture with topology visualisation', cls: 'term-muted' },
+        { text: 'A-LiME               github.com/Koajakins/A-LiME' },
+        { text: '                     Automated Linux memory extraction tooling', cls: 'term-muted' },
+        { text: 'haggath.re           haggath.re' },
+        { text: '                     This site', cls: 'term-muted' },
       ];
     },
     contact() {
