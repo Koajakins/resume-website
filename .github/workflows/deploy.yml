@@ -54,4 +54,9 @@ jobs:
       - name: Ping IndexNow
         run: |
           curl -s "https://api.indexnow.org/indexnow?url=https://www.haggath.re/&key=97dad8073f95443d944e286b8cf22bb8"
+      - name: Update dates
+        run: |
+          TODAY=$(date -u +%Y-%m-%d)
+          sed -i "s/\"dateModified\": \"[0-9-]*\"/\"dateModified\": \"$TODAY\"/" index.html
+          sed -i "s|<lastmod>[0-9-]*</lastmod>|<lastmod>$TODAY</lastmod>|" sitemap.xml
 
