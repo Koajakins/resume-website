@@ -481,7 +481,10 @@ document.querySelectorAll('.hero-term-link').forEach(el => {
       ];
     },
     ls() {
-      return [{ text: 'cv.pdf  index.html  style.css  script.js  profile.webp  robots.txt  sitemap.xml' }];
+      return [
+        { text: 'about/       experience/       skills/       projects/       contact/' },
+        { text: 'Type a directory name to explore, or run help for all commands.', cls: 'term-muted' },
+      ];
     },
     'cat cv.pdf'() {
       setTimeout(() => document.querySelector('a[download]')?.click(), 300);
