@@ -76,13 +76,15 @@
         { "@type": "EducationalOccupationalCredential", "name": "BSc Digital Forensics and Cyber Security" },
         { "@type": "EducationalOccupationalCredential", "name": "Security Incident Response Subject Matter Expert", "url": "https://www.credly.com/badges/92444f74-420e-4f95-9a43-4f044f531c28/public_url" },
         { "@type": "EducationalOccupationalCredential", "name": "Patch Management Subject Matter Expert", "url": "https://www.credly.com/badges/b4a14c6b-475d-4eca-a0f0-7c072a55b240/public_url" },
-        { "@type": "EducationalOccupationalCredential", "name": "Monitoring Bar Raiser", "url": "https://www.credly.com/badges/73ea4d23-267c-459b-b63f-2cb6d808c144/public_url" },
-        { "@type": "EducationalOccupationalCredential", "name": "AMS Builder Award", "url": "https://www.credly.com/badges/692014dd-2edd-46aa-9b29-dd0510b1ca50/public_url" },
         { "@type": "EducationalOccupationalCredential", "name": "Splunk Fundamentals" },
         { "@type": "EducationalOccupationalCredential", "name": "AWS Partner: Generative AI Essentials" },
         { "@type": "EducationalOccupationalCredential", "name": "Azure Cloud Fundamentals" },
         { "@type": "EducationalOccupationalCredential", "name": "IT Security Foundations" },
         { "@type": "EducationalOccupationalCredential", "name": "Active Directory Administration" }
+      ],
+      "award": [
+        { "name": "Monitoring Bar Raiser", "url": "https://www.credly.com/badges/73ea4d23-267c-459b-b63f-2cb6d808c144/public_url" },
+        { "name": "AMS Builder Award", "url": "https://www.credly.com/badges/692014dd-2edd-46aa-9b29-dd0510b1ca50/public_url" }
       ],
       "knowsAbout": [
         "AWS Cloud Security", "Incident Response", "Detection Engineering",
@@ -475,6 +477,7 @@
 
           <div class="skill-group">
             <h3 class="skill-group-label">Cloud Security (AWS)</h3>
+            <p class="skill-group-desc">Day-to-day toolset across 4+ years at AWS Managed Services. GuardDuty and CloudTrail form the core detection stack; IAM, KMS, and Config underpin security baselines across multi-account enterprise environments.</p>
             <div class="tag-list">
               <span class="tag">CloudTrail</span>
               <span class="tag">GuardDuty</span>
@@ -490,6 +493,7 @@
 
           <div class="skill-group">
             <h3 class="skill-group-label">Detection &amp; Incident Response</h3>
+            <p class="skill-group-desc">Primary discipline for 3+ years. Full incident lifecycle from triage through containment and post-incident review, aligned to NIST 800-61 — AWS SME-recognised for driving 45% reduction in mean containment time.</p>
             <div class="tag-list">
               <span class="tag">Alert Triage</span>
               <span class="tag">Containment</span>
@@ -502,6 +506,7 @@
 
           <div class="skill-group">
             <h3 class="skill-group-label">Monitoring &amp; SIEM</h3>
+            <p class="skill-group-desc">Splunk SPL used daily for detection rule authoring, alert tuning, and threat hunting across CloudTrail, VPC Flow Logs, and endpoint log sources at scale.</p>
             <div class="tag-list">
               <span class="tag">Splunk (SPL)</span>
               <span class="tag">CloudWatch</span>
@@ -513,6 +518,7 @@
 
           <div class="skill-group">
             <h3 class="skill-group-label">Automation &amp; Scripting</h3>
+            <p class="skill-group-desc">Python for incident response tooling and detection automation. Terraform and Control Tower for IaC-driven security baseline enforcement and landing zone provisioning across managed AWS estates.</p>
             <div class="tag-list">
               <span class="tag">Python</span>
               <span class="tag">PowerShell</span>
@@ -523,6 +529,7 @@
 
           <div class="skill-group">
             <h3 class="skill-group-label">Security Tooling</h3>
+            <p class="skill-group-desc">Deployed and operated across large-scale AWS customer environments as part of AMS security engineering — endpoint protection, intrusion detection, and vulnerability scanning at enterprise scale.</p>
             <div class="tag-list">
               <span class="tag">CrowdStrike</span>
               <span class="tag">Trend Micro IPS/IDS</span>
@@ -532,6 +539,7 @@
 
           <div class="skill-group">
             <h3 class="skill-group-label">Vulnerability &amp; Risk</h3>
+            <p class="skill-group-desc">Led patch management operations at enterprise scale — AWS Patch Management SME recognition for driving Config compliance from 68% to 94% and cutting vulnerability exposure windows across the managed estate.</p>
             <div class="tag-list">
               <span class="tag">Vulnerability Management</span>
               <span class="tag">Patch Management</span>
@@ -621,7 +629,8 @@
               </div>
               <a href="https://github.com/Koajakins/aws-security-siem" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">GitHub</a>
             </div>
-            <p class="edu-detail">Comprehensive security monitoring platform for AWS environments with an AI-powered threat detection engine and real-time visibility across 12+ AWS security services including GuardDuty, CloudTrail, Security Hub, Inspector, and AWS Config. Features an interactive CloudTrail event viewer, pattern-based anomaly recognition, and a Flask dashboard. Deployed via a full AWS CI/CD pipeline (CodePipeline, CodeBuild, CodeDeploy) with blue/green deployments, multi-AZ auto-scaling, and quality gates including Bandit security scanning.</p>
+            <p class="edu-detail">A self-built security operations platform designed to address a real gap: meaningful, correlated visibility across AWS security services without a commercial SIEM licence. The platform aggregates findings from 12+ AWS services — GuardDuty, CloudTrail, Security Hub, Inspector, Macie, and AWS Config — into a unified Flask dashboard with an AI-powered threat detection engine that applies pattern-based anomaly recognition across structured log sources.</p>
+            <p class="edu-detail">Built to reflect the detection engineering workflow I use professionally: ingest from CloudTrail, correlate across services, surface high-confidence signals. Features an interactive CloudTrail event viewer and configurable detection rules. Deployed entirely via AWS-native CI/CD (CodePipeline, CodeBuild, CodeDeploy) with blue/green deployments, multi-AZ auto-scaling, and automated quality gates including Bandit static security analysis — the same pipeline hygiene I enforce in production environments.</p>
             <div class="tag-list">
               <span class="tag">Python</span>
               <span class="tag">Flask</span>

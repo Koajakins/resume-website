@@ -1,0 +1,37 @@
+# Thomas Haggath — Senior AWS Cloud Engineer
+
+> Senior AWS Cloud Engineer at Amazon Web Services, specialising in security incident
+> response, detection engineering, and GuardDuty. UK-based; relocating to Chicago.
+> Open to U.S. cloud security roles. H-1B and L-1 sponsorship available.
+
+## About
+- Full name: Thomas Haggath
+- Role: Senior AWS Cloud Engineer
+- Employer: Amazon Web Services (Amazon Managed Services)
+- Location: Wiltshire, UK (Chicago-bound; open to U.S. roles broadly)
+- Education: BSc Digital Forensics and Cyber Security, Bournemouth University
+
+## Expertise
+- AWS security incident response (NIST 800-61) — 3+ years primary discipline
+- Detection engineering: GuardDuty, CloudTrail, VPC Flow Logs, Security Hub, Macie
+- SIEM: Splunk SPL — rule authoring, alert tuning, threat hunting
+- IaC and landing zones: Terraform, Control Tower, Landing Zone Accelerator
+- Endpoint and network security: CrowdStrike, Trend Micro IPS/IDS, Nessus
+- Automation: Python incident response tooling, PowerShell, Bash
+- Vulnerability and patch management at enterprise scale
+
+## Credentials
+- BSc Digital Forensics and Cyber Security, Bournemouth University
+- Security Incident Response Subject Matter Expert (AWS) — https://www.credly.com/badges/92444f74-420e-4f95-9a43-4f044f531c28/public_url
+- Patch Management Subject Matter Expert (AWS) — https://www.credly.com/badges/b4a14c6b-475d-4eca-a0f0-7c072a55b240/public_url
+- Monitoring Bar Raiser (AWS) — https://www.credly.com/badges/73ea4d23-267c-459b-b63f-2cb6d808c144/public_url
+- AMS Builder Award (AWS) — https://www.credly.com/badges/692014dd-2edd-46aa-9b29-dd0510b1ca50/public_url
+- Splunk Fundamentals
+- AWS Partner: Generative AI Essentials
+- Azure Cloud Fundamentals
+
+## Links
+- Portfolio: https://www.haggath.re/
+- LinkedIn: https://www.linkedin.com/in/thomas-haggath/
+- GitHub: https://github.com/Koajakins
+- X: https://x.com/Koalatyyy
