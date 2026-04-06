@@ -10,10 +10,24 @@ jobs:
     steps:
       - uses: actions/checkout@v4.2.2
 
+      - name: Set vnu cache key
+        id: vnu-key
+        run: echo "key=vnu-jar-$(date +%Y-W%U)" >> $GITHUB_OUTPUT
+
+      - name: Cache vnu.jar
+        id: cache-vnu
+        uses: actions/cache@v4
+        with:
+          path: /tmp/vnu.jar
+          key: ${{ steps.vnu-key.outputs.key }}
+          restore-keys: vnu-jar-
+
+      - name: Download vnu.jar
+        if: steps.cache-vnu.outputs.cache-hit != 'true'
+        run: curl -sL -o /tmp/vnu.jar https://github.com/validator/validator/releases/latest/download/vnu.jar
+
       - name: Validate HTML
-        run: |
-          curl -sL -o /tmp/vnu.jar https://github.com/validator/validator/releases/latest/download/vnu.jar
-          java -jar /tmp/vnu.jar --errors-only index.html
+        run: java -jar /tmp/vnu.jar --errors-only index.html
 
   deploy:
     runs-on: ubuntu-latest
@@ -43,7 +57,6 @@ jobs:
             **/.git*/**
             **/.github/**
             **/CLAUDE.md
-            **/.htaccess
 
       - name: Purge Cloudflare cache
         run: |
