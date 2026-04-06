@@ -482,7 +482,7 @@ document.querySelectorAll('.hero-term-link').forEach(el => {
     },
     ls() {
       return [
-        { text: 'about/       experience/       skills/       projects/       contact/' },
+        { text: 'about/       experience/       skills/       projects/       faq/       contact/' },
         { text: 'Type a directory name to explore, or run help for all commands.', cls: 'term-muted' },
       ];
     },
