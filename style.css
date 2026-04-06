@@ -29,7 +29,7 @@
   --border:       #2d3f55;
   --text:         #f1f5f9;
   --text-muted:   #94a3b8;
-  --text-subtle:  #5a7191;
+  --text-subtle:  #6c87ae;
   --accent:       #38bdf8;
   --accent-dim:   rgba(56, 189, 248, 0.1);
   --accent-hover: #7dd3fc;
@@ -64,6 +64,11 @@ a {
 
 ul {
   list-style: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
 }
 
 .container {
@@ -1300,7 +1305,7 @@ footer {
     --border:       #e2e8f0;
     --text:         #0f172a;
     --text-muted:   #475569;
-    --text-subtle:  #94a3b8;
+    --text-subtle:  #636d7b;
     --accent:       #0284c7;
     --accent-dim:   rgba(2, 132, 199, 0.08);
     --accent-hover: #0369a1;
@@ -1325,7 +1330,7 @@ footer {
   --border:       #e2e8f0;
   --text:         #0f172a;
   --text-muted:   #475569;
-  --text-subtle:  #94a3b8;
+  --text-subtle:  #636d7b;
   --accent:       #0284c7;
   --accent-dim:   rgba(2, 132, 199, 0.08);
   --accent-hover: #0369a1;
