@@ -461,11 +461,11 @@ document.querySelectorAll('.hero-term-link').forEach(el => {
     },
     projects() {
       return [
-        { text: 'SecurityObservatory  github.com/Koajakins/aws-security-siem' },
+        { text: 'SecurityObservatory  github.com/Koalatyyy/aws-security-siem' },
         { text: '                     AI-powered threat detection across 12+ AWS services', cls: 'term-muted' },
-        { text: 'PacketTracer         github.com/Koajakins/PacketTracer' },
+        { text: 'PacketTracer         github.com/Koalatyyy/PacketTracer' },
         { text: '                     Real-time packet capture with topology visualisation', cls: 'term-muted' },
-        { text: 'A-LiME               github.com/Koajakins/A-LiME' },
+        { text: 'A-LiME               github.com/Koalatyyy/A-LiME' },
         { text: '                     Automated Linux memory extraction tooling', cls: 'term-muted' },
         { text: 'haggath.re           haggath.re' },
         { text: '                     This site', cls: 'term-muted' },
@@ -475,7 +475,7 @@ document.querySelectorAll('.hero-term-link').forEach(el => {
       return [
         { text: 'Email:     tom@haggath.re' },
         { text: 'LinkedIn:  linkedin.com/in/thomas-haggath' },
-        { text: 'GitHub:    github.com/Koajakins' },
+        { text: 'GitHub:    github.com/Koalatyyy' },
         { text: '' },
         { text: 'Or scroll down to #contact to send a message.', cls: 'term-muted' },
       ];
