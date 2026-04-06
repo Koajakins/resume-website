@@ -1,0 +1,13 @@
+/* TEAM */
+Author: Thomas Haggath
+Role: Senior AWS Cloud Engineer
+Location: Wiltshire, UK
+LinkedIn: https://www.linkedin.com/in/thomas-haggath/
+GitHub: https://github.com/Koajakins
+
+/* SITE */
+Last updated: 2026-04-06
+Language: English
+Doctype: HTML5
+Technology: HTML, CSS, Vanilla JS
+Hosted on: Cloudflare Pages

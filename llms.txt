@@ -8,6 +8,7 @@
 - Full name: Thomas Haggath
 - Role: Senior AWS Cloud Engineer
 - Employer: Amazon Web Services (Amazon Managed Services)
+- Tenure: 7+ years at AWS Managed Services (Jun 2019 — present)
 - Location: Wiltshire, UK (Chicago-bound; open to U.S. roles broadly)
 - Education: BSc Digital Forensics and Cyber Security, Bournemouth University
 
