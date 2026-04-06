@@ -251,7 +251,6 @@ document.querySelectorAll('.copy-btn').forEach(btn => {
 
     const formData = new FormData(form);
     const payload = Object.fromEntries(formData);
-    payload.access_key = 'dedb1847-188d-4387-a324-63e93dfbf244';
 
     const originalText = submitBtn.textContent;
     submitBtn.textContent = 'Sending\u2026';
@@ -260,7 +259,7 @@ document.querySelectorAll('.copy-btn').forEach(btn => {
     status.className = 'form-status';
 
     try {
-      const response = await fetch('https://api.web3forms.com/submit', {
+      const response = await fetch('https://formspree.io/f/maqlarpj', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify(payload),
@@ -272,7 +271,8 @@ document.querySelectorAll('.copy-btn').forEach(btn => {
         status.classList.add('success');
         form.reset();
       } else {
-        status.textContent = data.message || 'Submission failed. Please try again.';
+        const msg = data.errors?.map(e => e.message).join('. ') || 'Submission failed. Please try again.';
+        status.textContent = msg;
         status.classList.add('error');
       }
     } catch {
