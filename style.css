@@ -1306,9 +1306,9 @@ footer {
     --text:         #0f172a;
     --text-muted:   #475569;
     --text-subtle:  #636d7b;
-    --accent:       #0284c7;
-    --accent-dim:   rgba(2, 132, 199, 0.08);
-    --accent-hover: #0369a1;
+    --accent:       #0369a1;
+    --accent-dim:   rgba(3, 105, 161, 0.08);
+    --accent-hover: #025e8c;
   }
 
   :root:not([data-theme="dark"]) #navbar {
@@ -1331,9 +1331,9 @@ footer {
   --text:         #0f172a;
   --text-muted:   #475569;
   --text-subtle:  #636d7b;
-  --accent:       #0284c7;
-  --accent-dim:   rgba(2, 132, 199, 0.08);
-  --accent-hover: #0369a1;
+  --accent:       #0369a1;
+  --accent-dim:   rgba(3, 105, 161, 0.08);
+  --accent-hover: #025e8c;
 }
 
 [data-theme="light"] #navbar {
@@ -1346,8 +1346,6 @@ footer {
 
 [data-theme="light"] .theme-toggle .icon-sun { display: none; }
 [data-theme="light"] .theme-toggle .icon-moon { display: block; }
-
-.botcheck { display: none; }
 
 /* ─── Terminal ─────────────────────────────────────────────────────────────── */
 
