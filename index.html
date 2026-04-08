@@ -662,7 +662,25 @@
       <div class="container">
         <h2 class="section-title">Projects</h2>
         <div class="edu-list">
-
+          <article class="edu-card">
+            <div class="edu-header">
+              <div>
+                <h3 class="edu-degree">haggath.re</h3>
+                <p class="edu-institution">Personal Resume Website</p>
+              </div>
+              <a href="https://www.haggath.re" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">Live Site</a>
+            </div>
+            <p class="edu-detail">Static personal resume site built with plain HTML, CSS, and vanilla JavaScript -- no frameworks, no build step, no npm. Features a mobile-responsive layout with dark/light theme toggle, scroll reveal animations, and a Formspree-backed contact form. Plausible Analytics provides privacy-respecting visitor insight without cookie consent requirements.</p>
+            <p class="edu-detail">Security is enforced at the server level: Content Security Policy, HSTS, and X-Frame-Options headers are set in .htaccess, with SRI integrity hashes on all external scripts. Deployed via GitHub Actions CI/CD -- HTML is validated with vnu.jar on every push, then transferred to OVH shared hosting via FTP, with automatic Cloudflare cache purge and IndexNow search engine ping to complete each release.</p>
+            <div class="tag-list">
+              <span class="tag">HTML / CSS / JS</span>
+              <span class="tag">GitHub Actions</span>
+              <span class="tag">Cloudflare</span>
+              <span class="tag">CI/CD</span>
+              <span class="tag">Security Headers</span>
+              <span class="tag">SRI</span>
+            </div>
+          </article>
           <article class="edu-card">
             <div class="edu-header">
               <div>
@@ -720,7 +738,7 @@
               <span class="tag">Cross-compilation</span>
             </div>
           </article>
-
+        
           <article class="edu-card">
             <div class="edu-header">
               <div>
@@ -737,23 +755,6 @@
               <span class="tag">SPF / DKIM / DMARC</span>
               <span class="tag">Email Forensics</span>
               <span class="tag">Phishing Detection</span>
-            </div>
-          </article>
-
-          <article class="edu-card">
-            <div class="edu-header">
-              <div>
-                <h3 class="edu-degree">haggath.re</h3>
-                <p class="edu-institution">Personal Resume Website</p>
-              </div>
-              <a href="https://www.haggath.re" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">Live Site</a>
-            </div>
-            <p class="edu-detail">Static resume site built with plain HTML, CSS, and vanilla JS — no frameworks or build step. Deployed via GitHub Actions CI/CD to OVH shared hosting, served through Cloudflare with DNSSEC and Full (strict) SSL.</p>
-            <div class="tag-list">
-              <span class="tag">HTML / CSS / JS</span>
-              <span class="tag">GitHub Actions</span>
-              <span class="tag">Cloudflare</span>
-              <span class="tag">CI/CD</span>
             </div>
           </article>
 
