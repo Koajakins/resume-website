@@ -31,6 +31,19 @@
 - AWS Partner: Generative AI Essentials
 - Azure Cloud Fundamentals
 
+## Projects
+- haggath.re (Personal Resume Website) — static HTML/CSS/JS site with CI/CD via GitHub Actions, OVH hosting, Cloudflare CDN, SRI hashes, CSP headers — https://www.haggath.re
+- automated-ctfs — TypeScript CLI automating full HackTheBox recon pipeline (nmap, nikto, gobuster, enum4linux) with HTB VPN lifecycle management via WSL bridge — https://github.com/Koalatyyy/hackthebox-automation-script
+- AWS Security Observatory — Flask-based security operations platform aggregating GuardDuty, CloudTrail, Security Hub, Inspector, Macie, and AWS Config with AI-powered threat detection and CloudFormation/CodePipeline CI/CD — https://github.com/Koalatyyy/aws-security-siem
+- PacketTracer — real-time network packet capture and topology visualisation tool (PyQt6, NetworkX) with BPF filtering — https://github.com/Koalatyyy/PacketTracer
+- Phishing Header Analyzer — browser-based email header/URL phishing analysis tool; no server or API keys; SPF/DKIM/DMARC checks, URL heuristics, 63 unit tests — https://github.com/Koalatyyy/phishing-analysis-app
+- A-LiME — Python tooling for automated cross-compilation of Linux kernel modules and memory extraction with ADB integration — https://github.com/Koalatyyy/A-LiME
+
+## Availability
+- Status: actively seeking U.S. cloud security roles; available for remote interviews immediately
+- Sponsorship: H-1B and L-1 available
+- Contact: https://www.haggath.re/#contact or https://www.linkedin.com/in/thomas-haggath/
+
 ## Links
 - Portfolio: https://www.haggath.re/
 - LinkedIn: https://www.linkedin.com/in/thomas-haggath/
