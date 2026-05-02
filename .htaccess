@@ -16,6 +16,14 @@ RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 # Disable directory listing
 Options -Indexes
 
+# Allow PDFs to be indexed by search engines
+<FilesMatch "\.pdf$">
+  Header set X-Robots-Tag "index, follow"
+</FilesMatch>
+
+# Probe: confirms .htaccess is being read by the origin server
+Header always set X-Test-Htaccess "alive"
+
 # Security headers
 Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
 Header always set X-Content-Type-Options "nosniff"
