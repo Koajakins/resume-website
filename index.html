@@ -153,6 +153,117 @@
   }
   </script>
 
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home",       "item": "https://www.haggath.re/#hero" },
+      { "@type": "ListItem", "position": 2, "name": "About",      "item": "https://www.haggath.re/#about" },
+      { "@type": "ListItem", "position": 3, "name": "Experience", "item": "https://www.haggath.re/#experience" },
+      { "@type": "ListItem", "position": 4, "name": "Skills",     "item": "https://www.haggath.re/#skills" },
+      { "@type": "ListItem", "position": 5, "name": "Education",  "item": "https://www.haggath.re/#education" },
+      { "@type": "ListItem", "position": 6, "name": "Projects",   "item": "https://www.haggath.re/#projects" },
+      { "@type": "ListItem", "position": 7, "name": "FAQ",        "item": "https://www.haggath.re/#faq" },
+      { "@type": "ListItem", "position": 8, "name": "Contact",    "item": "https://www.haggath.re/#contact" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Demand",
+    "name": "Senior AWS Cloud Security Engineer — open to U.S. roles",
+    "description": "Thomas Haggath is actively seeking Cloud Security Engineer, Detection Engineer, or Security Operations roles in the Chicago metro area, with openness to U.S. positions more broadly. H-1B and L-1 visa sponsorship required.",
+    "url": "https://www.haggath.re/#contact",
+    "availabilityStarts": "2026-05-02",
+    "availableAtOrFrom": {
+      "@type": "Place",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Chicago",
+        "addressRegion": "IL",
+        "addressCountry": "US"
+      }
+    },
+    "eligibleRegion": [
+      { "@type": "Country", "name": "United States" }
+    ],
+    "seller": {
+      "@id": "https://www.haggath.re/#person"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "haggath.re",
+        "description": "Static personal resume site built with plain HTML, CSS, and vanilla JavaScript. CI/CD via GitHub Actions, OVH hosting, Cloudflare CDN, SRI hashes, strict CSP headers.",
+        "url": "https://www.haggath.re/",
+        "codeRepository": "https://github.com/Haggath/resume-website",
+        "programmingLanguage": ["HTML", "CSS", "JavaScript"],
+        "author": { "@id": "https://www.haggath.re/#person" }
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "automated-ctfs",
+        "description": "TypeScript CLI automating the full HackTheBox recon pipeline (nmap, nikto, gobuster, enum4linux) with HTB VPN lifecycle management via a WSL bridge.",
+        "url": "https://github.com/Koalatyyy/hackthebox-automation-script",
+        "codeRepository": "https://github.com/Koalatyyy/hackthebox-automation-script",
+        "programmingLanguage": ["TypeScript", "Node.js"],
+        "applicationCategory": "SecurityApplication",
+        "author": { "@id": "https://www.haggath.re/#person" }
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "AWS Security Observatory",
+        "description": "Self-built security operations platform aggregating findings from 12+ AWS services (GuardDuty, CloudTrail, Security Hub, Inspector, Macie, AWS Config) into a unified Flask dashboard with AI-powered threat detection. Deployed via CodePipeline / CodeBuild / CodeDeploy with blue/green and Bandit static analysis gates.",
+        "url": "https://github.com/Koalatyyy/aws-security-siem",
+        "codeRepository": "https://github.com/Koalatyyy/aws-security-siem",
+        "programmingLanguage": ["Python"],
+        "runtimePlatform": "Flask",
+        "applicationCategory": "SecurityApplication",
+        "author": { "@id": "https://www.haggath.re/#person" }
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "PacketTracer",
+        "description": "Real-time network traffic capture and analysis tool with interactive topology graph visualisation. Live host connections, IP-to-hostname resolution, protocol filtering, and Berkeley Packet Filter support.",
+        "url": "https://github.com/Koalatyyy/PacketTracer",
+        "codeRepository": "https://github.com/Koalatyyy/PacketTracer",
+        "programmingLanguage": ["Python"],
+        "applicationCategory": "NetworkApplication",
+        "author": { "@id": "https://www.haggath.re/#person" }
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "A-LiME",
+        "description": "Python tooling to automate cross-compilation of Linux kernel modules and memory extraction tools, with Android Debug Bridge (ADB) integration for testing on rooted devices.",
+        "url": "https://github.com/Koalatyyy/A-LiME",
+        "codeRepository": "https://github.com/Koalatyyy/A-LiME",
+        "programmingLanguage": ["Python"],
+        "applicationCategory": "SecurityApplication",
+        "author": { "@id": "https://www.haggath.re/#person" }
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Phishing Header Analyzer",
+        "description": "Standalone browser-based tool for analyzing email headers and body links for phishing indicators. SPF/DKIM/DMARC checks, Reply-To/Return-Path mismatch, display-name spoofing, suspicious URL detection. Single-page app with 63 unit tests covering all detection functions.",
+        "url": "https://github.com/Koalatyyy/phishing-analysis-app",
+        "codeRepository": "https://github.com/Koalatyyy/phishing-analysis-app",
+        "programmingLanguage": ["JavaScript", "HTML", "CSS"],
+        "applicationCategory": "SecurityApplication",
+        "author": { "@id": "https://www.haggath.re/#person" }
+      }
+    ]
+  }
+  </script>
+
   <link rel="preload" as="image" href="profile.webp" type="image/webp">
 
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
