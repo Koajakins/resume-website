@@ -409,6 +409,8 @@ section {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.875rem;
+  max-width: 420px;
+  align-self: start;
 }
 
 .stat-card {
@@ -439,6 +441,14 @@ section {
   text-transform: uppercase;
   letter-spacing: 0.06em;
   line-height: 1.3;
+}
+
+.stat-caption {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  line-height: 1.35;
+  margin-top: 0.35rem;
+  opacity: 0.75;
 }
 
 #experience {
