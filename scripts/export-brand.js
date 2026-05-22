@@ -84,10 +84,11 @@ async function run() {
     .jpeg({ quality: 85 })
     .toFile(path.join(ASSETS, 'og-card.jpg'));
 
-  // LinkedIn banner
+  // LinkedIn banner — flatten alpha to white so LinkedIn accepts it
   console.log('Exporting linkedin-banner.png...');
   await sharp(loadSvg('linkedin-banner.svg'))
     .resize(1584, 396)
+    .flatten({ background: '#0f172a' })
     .png()
     .toFile(path.join(ASSETS, 'linkedin-banner.png'));
 

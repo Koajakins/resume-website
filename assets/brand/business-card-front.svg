@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="3.5in" height="2in" viewBox="0 0 1050 600">
+  <defs>
+    <style>
+      @font-face {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 100 900;
+        src: url('data:font/woff2;base64,FONT_B64_PLACEHOLDER') format('woff2');
+      }
+    </style>
+    <pattern id="dots" x="0" y="0" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.5" fill="#38bdf8"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1050" height="600" fill="#0f172a"/>
+
+  <!-- Dot grid: right ~38% -->
+  <rect x="650" y="0" width="400" height="600" fill="url(#dots)" opacity="0.08"/>
+
+  <!-- TH initials mark -->
+  <rect x="70" y="58" width="48" height="48" rx="9" fill="#1e293b"/>
+  <text x="94" y="89" font-family="Inter, system-ui, sans-serif" font-weight="700" font-size="21" fill="#38bdf8" text-anchor="middle">TH</text>
+
+  <!-- Name -->
+  <text x="70" y="255" font-family="Inter, system-ui, sans-serif" font-size="68" letter-spacing="-1.5">
+    <tspan font-weight="400" fill="#f1f5f9">Thomas </tspan><tspan font-weight="700" fill="#38bdf8">Haggath</tspan>
+  </text>
+
+  <!-- Separator -->
+  <rect x="70" y="272" width="460" height="3" fill="#38bdf8"/>
+
+  <!-- Title -->
+  <text x="70" y="315" font-family="Inter, system-ui, sans-serif" font-weight="400" font-size="26" fill="#94a3b8">Senior AWS Cloud Engineer</text>
+
+  <!-- Contact block -->
+  <text x="70" y="410" font-family="Inter, system-ui, sans-serif" font-weight="400" font-size="21" fill="#64748b">tom@haggath.re</text>
+  <text x="70" y="443" font-family="Inter, system-ui, sans-serif" font-weight="400" font-size="21" fill="#64748b">haggath.re</text>
+  <text x="70" y="476" font-family="Inter, system-ui, sans-serif" font-weight="400" font-size="21" fill="#64748b">linkedin.com/in/thomashaggath</text>
+</svg>
