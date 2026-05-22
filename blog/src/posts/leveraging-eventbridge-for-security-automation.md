@@ -1,9 +1,7 @@
 ---
 title: "Leveraging Amazon EventBridge to invoke Security Automation"
-date: 2026-05-16
+date: 2026-05-22
 excerpt: "How EventBridge rules can capture events from GuardDuty, Macie, and Security Hub and automatically invoke remediation workflows."
-eleventyExcludeFromCollections: true
-noindex: true
 ---
 
 GuardDuty identifies threats. Macie surfaces sensitive data exposure. Security Hub aggregates findings across both. None of them act on what they find by default — that part is on you.

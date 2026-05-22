@@ -2,6 +2,8 @@
 title: "AWS Config rules, conformance packs, and the operational details that matter"
 date: 2026-05-22
 excerpt: "A practitioner-focused look at AWS Config rule types, evaluation mechanics, conformance pack deployment, and the cost and correctness traps that catch teams off guard."
+eleventyExcludeFromCollections: true
+noindex: true
 ---
 
 AWS Config evaluates resource configurations against rules you define, recording compliance state as a time-series alongside configuration history. It is a continuous assessment system, not a real-time enforcement layer. That distinction matters when you are deciding what to build on top of it.
