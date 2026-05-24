@@ -9,19 +9,13 @@ ErrorDocument 404 /404.html
 </FilesMatch>
 <FilesMatch "\.txt$">
   Header set Content-Type "text/plain; charset=utf-8"
+  Header set Cache-Control "no-store"
 </FilesMatch>
-
-<Files "llms.txt">
-  ForceType text/plain
-</Files>
 
 # Redirect HTTP to HTTPS
 RewriteEngine On
 RewriteCond %{HTTPS} off
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
-# Serve .txt files directly, bypass any rewrites
-RewriteRule \.txt$ - [L]
 
 # Disable directory listing
 Options -Indexes
