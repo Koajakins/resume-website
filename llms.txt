@@ -42,6 +42,8 @@
 ## Writing
 - Leveraging GuardDuty suppression rules to eliminate noise — https://www.haggath.re/blog/guardduty-suppression-rules/
 - Leveraging Macie suppression rules to eliminate noise — https://www.haggath.re/blog/macie-suppression-rules/
+- Leveraging Amazon EventBridge to invoke Security Automation — https://www.haggath.re/blog/leveraging-eventbridge-for-security-automation/
+- Understanding Security Hub: ASFF, severity normalisation, and cross-account aggregation — https://www.haggath.re/blog/security-hub-aggregation-severity/
 - dev.to: AWS security, detection engineering, and cloud defence — https://dev.to/haggath
 
 ## Availability
