@@ -8,7 +8,7 @@ layout: base.njk
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.haggath.re/" },
     { "@type": "ListItem", "position": 2, "name": "Writing", "item": "https://www.haggath.re/blog/" },
-    { "@type": "ListItem", "position": 3, "name": "{{ title }}", "item": "https://www.haggath.re{{ page.url }}" }
+    { "@type": "ListItem", "position": 3, "name": "{{ title }}", "item": "https://www.haggath.re/blog{{ page.url }}" }
   ]
 }
 </script>
@@ -21,8 +21,8 @@ layout: base.njk
   "datePublished": "{{ date | htmlDateString }}",
   "dateModified": "{{ (updated or date) | htmlDateString }}",
   "image": "https://www.haggath.re/assets/og-card.jpg",
-  "url": "https://www.haggath.re{{ page.url }}",
-  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.haggath.re{{ page.url }}" },
+  "url": "https://www.haggath.re/blog{{ page.url }}",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.haggath.re/blog{{ page.url }}" },
   "author": {
     "@type": "Person",
     "@id": "https://www.haggath.re/#person",
