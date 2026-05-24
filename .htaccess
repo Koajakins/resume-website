@@ -11,6 +11,10 @@ ErrorDocument 404 /404.html
   Header set Content-Type "text/plain; charset=utf-8"
 </FilesMatch>
 
+<Files "llms.txt">
+  ForceType text/plain
+</Files>
+
 # Redirect HTTP to HTTPS
 RewriteEngine On
 RewriteCond %{HTTPS} off
