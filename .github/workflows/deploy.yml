@@ -119,6 +119,6 @@ jobs:
         run: |
           curl -s -X POST "https://api.indexnow.org/indexnow" \
             -H "Content-Type: application/json" \
-            --data '{"host":"www.haggath.re","key":"97dad8073f95443d944e286b8cf22bb8","urlList":["https://www.haggath.re/","https://www.haggath.re/blog/","https://www.haggath.re/blog/guardduty-suppression-rules/","https://www.haggath.re/blog/macie-suppression-rules/","https://www.haggath.re/blog/security-hub-aggregation-severity/"]}'
+            --data '{"host":"www.haggath.re","key":"97dad8073f95443d944e286b8cf22bb8","urlList":["https://www.haggath.re/","https://www.haggath.re/blog/","https://www.haggath.re/blog/guardduty-suppression-rules/","https://www.haggath.re/blog/macie-suppression-rules/","https://www.haggath.re/blog/leveraging-eventbridge-for-security-automation/","https://www.haggath.re/blog/security-hub-aggregation-severity/"]}'
 
 
