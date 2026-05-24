@@ -20,6 +20,9 @@ RewriteEngine On
 RewriteCond %{HTTPS} off
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
+# Serve .txt files directly, bypass any rewrites
+RewriteRule \.txt$ - [L]
+
 # Disable directory listing
 Options -Indexes
 
