@@ -52,6 +52,13 @@ layout: base.njk
   {% endfor %}
   {% set prevPost = postList[currentIndex + 1] %}
   {% set nextPost = postList[currentIndex - 1] if currentIndex > 0 else null %}
+  <aside class="author-bio">
+    <img src="https://www.haggath.re/assets/profile.webp" alt="Thomas Haggath" width="56" height="56" loading="lazy">
+    <div class="author-bio-text">
+      <strong>Thomas Haggath</strong>
+      <p>Senior Cloud Security Engineer with 7+ years at Amazon Web Services. Specialises in AWS security incident response, detection engineering, GuardDuty, and MITRE ATT&CK across enterprise multi-account environments. <a href="https://www.haggath.re/">haggath.re</a></p>
+    </div>
+  </aside>
   {% if prevPost or nextPost %}
   <nav class="post-nav" aria-label="Post navigation">
     <div class="post-nav-inner">

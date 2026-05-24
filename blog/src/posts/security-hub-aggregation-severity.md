@@ -1,5 +1,5 @@
 ---
-title: "Understanding Security Hub: ASFF, severity normalisation, and cross-account aggregation"
+title: "AWS Security Hub: ASFF, Severity Normalisation and Cross-Account Aggregation"
 date: 2026-05-16
 excerpt: "How Security Hub normalises findings from GuardDuty, Macie, and 30+ integrations into a single schema — and what the severity scores actually mean."
 ---

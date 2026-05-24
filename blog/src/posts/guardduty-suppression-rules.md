@@ -1,5 +1,5 @@
 ---
-title: "Leveraging GuardDuty suppression rules to eliminate noise"
+title: "GuardDuty Suppression Rules: Reduce Alert Noise on AWS"
 date: 2026-05-10
 excerpt: "How to use suppression rules, trusted IP lists, and threat intel lists to reduce GuardDuty alert noise."
 ---
