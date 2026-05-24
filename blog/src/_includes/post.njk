@@ -20,7 +20,12 @@ layout: base.njk
   "description": "{{ excerpt or description }}",
   "datePublished": "{{ date | htmlDateString }}",
   "dateModified": "{{ (updated or date) | htmlDateString }}",
-  "image": "https://www.haggath.re/assets/og-card.jpg",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://www.haggath.re/assets/og-card.jpg",
+    "width": 1200,
+    "height": 630
+  },
   "url": "https://www.haggath.re/blog{{ page.url }}",
   "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.haggath.re/blog{{ page.url }}" },
   "author": {
@@ -30,10 +35,11 @@ layout: base.njk
     "url": "https://www.haggath.re/"
   },
   "publisher": {
-    "@type": "Organization",
+    "@type": "Person",
+    "@id": "https://www.haggath.re/#person",
     "name": "Thomas Haggath",
     "url": "https://www.haggath.re/",
-    "logo": { "@type": "ImageObject", "url": "https://www.haggath.re/assets/og-card.jpg" }
+    "logo": { "@type": "ImageObject", "url": "https://www.haggath.re/assets/og-card.jpg", "width": 1200, "height": 630 }
   }
 }
 </script>
