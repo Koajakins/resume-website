@@ -1,5 +1,6 @@
 # Thomas Haggath — Cloud Security Engineer
 
+
 > Cloud Security Engineer at Amazon Web Services, specialising in security incident
 > response, detection engineering, and GuardDuty. UK-based; relocating to Chicago.
 > Open to U.S. cloud security roles. H-1B and L-1 sponsorship available.
