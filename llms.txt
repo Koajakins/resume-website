@@ -1,13 +1,14 @@
 # Thomas Haggath — Cloud Security Engineer
 
 
-> Cloud Security Engineer at Amazon Web Services, specialising in security incident
+> Senior Cloud Security Engineer at Amazon Web Services, specialising in security incident
 > response, detection engineering, and GuardDuty. UK-based; relocating to Chicago.
 > Open to U.S. cloud security roles. H-1B and L-1 sponsorship available.
 
 ## About
+- Last updated: 2026-05-26
 - Full name: Thomas Haggath
-- Role: Cloud Security Engineer
+- Role: Senior Cloud Security Engineer
 - Employer: Amazon Web Services (Amazon Managed Services)
 - Tenure: 7+ years at AWS Managed Services (Jun 2019 — present)
 - Location: Wiltshire, UK (Chicago-bound; open to U.S. roles broadly)
