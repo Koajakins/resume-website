@@ -1079,6 +1079,12 @@ footer {
   margin-top: 0.75rem;
 }
 
+.writing-cta {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
 .contact-link--static {
   pointer-events: none;
   cursor: default;
