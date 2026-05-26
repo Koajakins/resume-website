@@ -21,6 +21,8 @@ Security Hub must be enabled per account and per region. Integrations with Guard
 
 ## Finding Categories
 
+Security Hub classifies every finding using the [ASFF `Types` field](https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-findings-format-type-taxonomy.html) — a three-level `Namespace/Category/Classifier` taxonomy that maps findings from GuardDuty, Macie, Config, and other integrations to a consistent set of threat categories.
+
 Security Hub classifies every finding using the ASFF `Types` field, which follows a three-level namespace taxonomy: `Namespace/Category/Classifier`. A finding can carry multiple `Types` values when it maps to more than one classification.
 
 The five namespaces in use across Security Hub integrations:
@@ -40,6 +42,8 @@ Security Hub Controls findings always fall under `Software and Configuration Che
 ---
 
 ## The Amazon Security Finding Format (ASFF)
+
+The [Amazon Security Finding Format (ASFF)](https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-findings-format.html) is the standardised JSON schema that every Security Hub integration must map its findings to — giving every finding from every source the same set of fields, including severity, affected resource, finding type, and workflow state.
 
 ASFF is the JSON schema that all Security Hub findings conform to. Every integrated service must translate its native finding format into ASFF before Security Hub will ingest it. This normalisation is what makes cross-service querying and filtering possible.
 
@@ -67,6 +71,8 @@ The distinction between `RecordState` and `Workflow.Status` trips people up. `Re
 ---
 
 ## Severity Normalisation
+
+Security Hub [maps every integrated service's native severity scale](https://docs.aws.amazon.com/securityhub/latest/userguide/finding-update-batchimportfindings.html#batchimportfindings-severity) to a `Severity.Normalized` integer between 0 and 100, deriving a common `Severity.Label` — `INFORMATIONAL`, `LOW`, `MEDIUM`, `HIGH`, or `CRITICAL` — that can be compared across GuardDuty, Macie, Inspector, and other sources in a single query.
 
 Every finding ingested by Security Hub is assigned a `Severity.Normalized` score between 0 and 100. This score determines the `Severity.Label` displayed in the console and returned by the API:
 
@@ -107,6 +113,8 @@ The original source severity is always available in `FindingProviderFields.Sever
 
 ## Cross-Account Aggregation
 
+[Security Hub cross-account aggregation](https://docs.aws.amazon.com/securityhub/latest/userguide/finding-aggregation.html) centralises findings from all member accounts into a single administrator account view — one API, one console, one place to query across your entire AWS organisation.
+
 In a multi-account AWS organisation, Security Hub findings are generated locally in each member account. Cross-account aggregation centralises them into a single view without requiring you to log into each account separately.
 
 ### Delegated Administrator
@@ -128,6 +136,8 @@ When querying aggregated findings, the `AwsAccountId` filter attribute scopes re
 ---
 
 ## Example ASFF Finding
+
+The following [`UnauthorizedAccess:IAMUser/ConsoleLoginSuccess.B`](https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_finding-types-iam.html#unauthorizedaccess-iam-consoleloginsuccessb) finding shows how a GuardDuty alert looks after Security Hub normalises it into ASFF — with the original GuardDuty severity preserved in `FindingProviderFields` alongside the normalised score.
 
 The following is a GuardDuty `UnauthorizedAccess:IAMUser/ConsoleLoginSuccess.B` finding as it appears in Security Hub after normalisation, in the format returned by the `GetFindings` API.
 

@@ -12,6 +12,8 @@ Amazon EventBridge is where detection meets response. It captures events emitted
 
 ## What is Amazon EventBridge?
 
+[Amazon EventBridge](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-what-is.html) is a serverless event bus that receives structured JSON events from AWS services and routes them to targets you define — Lambda functions, Step Functions workflows, SNS topics, and more — based on rules you configure.
+
 EventBridge is a serverless event bus. AWS services publish structured JSON events to it when things happen: a GuardDuty finding is generated, an EC2 instance changes state, an IAM policy is modified. EventBridge receives those events on the default event bus and evaluates them against rules you define. Matching events get delivered to your targets.
 
 There are three ways to work with events in EventBridge:
@@ -25,6 +27,8 @@ For security automation, you'll mostly be working with event buses and rules.
 ---
 
 ## Event-Driven Automation in AWS
+
+Event-driven automation replaces the manual security operations loop — finding, review, ticket, action — with an immediate, rule-driven response triggered the moment a security service emits an event, collapsing detection-to-response time from hours to seconds.
 
 The traditional security operations loop — finding appears, analyst reviews it, ticket gets raised, someone performs a manual action — doesn't hold up in environments with hundreds of accounts and thousands of resources. The volume is too high and the latency is too long.
 
@@ -57,6 +61,8 @@ In each case the automation runs immediately, nothing in production is touched, 
 ---
 
 ## How EventBridge Captures Security Events
+
+[EventBridge rules](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-rules.html) match incoming events using [event patterns](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-event-patterns.html) — JSON filters that specify which fields and values must be present — and route matching events to up to five targets simultaneously.
 
 ### Event Patterns
 
@@ -131,6 +137,8 @@ Each rule supports up to five targets, all invoked in parallel with the same eve
 ---
 
 ## Example: Automated Response to Credential Exfiltration
+
+[`UnauthorizedAccess:IAMUser/InstanceCredentialExfiltration.OutsideAWS`](https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_finding-types-iam.html#unauthorizedaccess-iam-instancecredentialexfiltrationoutsideaws) fires when EC2 instance credentials are used from outside AWS infrastructure — a high-fidelity indicator with a low false-positive rate that warrants an immediate automated response.
 
 `UnauthorizedAccess:IAMUser/InstanceCredentialExfiltration.OutsideAWS` fires when EC2 instance credentials are used from outside AWS infrastructure. Instance credentials should never originate outside AWS, so the false positive rate on this one is low.
 
