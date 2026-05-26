@@ -18,8 +18,8 @@ layout: base.njk
   "@type": "Article",
   "headline": "{{ title }}",
   "description": "{{ excerpt or description }}",
-  "datePublished": "{{ date | htmlDateString }}",
-  "dateModified": "{{ (updated or date) | htmlDateString }}",
+  "datePublished": "{{ date | isoDateString }}",
+  "dateModified": "{{ (updated or date) | isoDateString }}",
   "image": {
     "@type": "ImageObject",
     "url": "https://www.haggath.re/assets/og-card.jpg",

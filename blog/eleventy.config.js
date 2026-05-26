@@ -23,6 +23,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("htmlDateString", (date) =>
     new Date(date).toISOString().split("T")[0]
   );
+  eleventyConfig.addFilter("isoDateString", (date) =>
+    new Date(date).toISOString()
+  );
   eleventyConfig.addFilter("readingTime", (content) => {
     const words = content.replace(/<[^>]+>/g, "").split(/\s+/).filter(Boolean).length;
     return Math.max(1, Math.round(words / 200));

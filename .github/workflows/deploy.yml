@@ -41,7 +41,7 @@ jobs:
       - name: Update sitemap lastmod
         run: |
           TODAY=$(date -u +%Y-%m-%d)
-          sed -i "s/\"dateModified\": \"[0-9-]*\"/\"dateModified\": \"$TODAY\"/" index.html
+          sed -i "s/\"dateModified\": \"[0-9T:Z-]*\"/\"dateModified\": \"${TODAY}T00:00:00Z\"/" index.html
           sed -i "s/\"availabilityStarts\": \"[0-9-]*\"/\"availabilityStarts\": \"$TODAY\"/" index.html
           sed -i "s|<lastmod>[0-9-]*</lastmod>|<lastmod>$TODAY</lastmod>|" sitemap.xml
 
