@@ -400,6 +400,7 @@ if (termToggle) termToggle.addEventListener('click', e => {
 document.querySelectorAll('.hero-term-link').forEach(el => {
   el.addEventListener('click', e => {
     e.preventDefault();
+    if (!termSection) return;
     termSection.hidden = false;
     termSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
     document.getElementById('term-input')?.focus();

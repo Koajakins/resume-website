@@ -14,6 +14,9 @@
   <meta property="og:title"       content="{{ title }}">
   <meta property="og:description" content="{{ description or excerpt or 'Writing on AWS security, threat detection, and cloud defence by Thomas Haggath.' }}">
   <meta property="og:url"         content="https://www.haggath.re/blog{{ page.url }}">
+  {% if date %}<meta property="article:published_time" content="{{ date | isoDateString }}">{% endif %}
+  {% if updated or date %}<meta property="article:modified_time"  content="{{ (updated or date) | isoDateString }}">{% endif %}
+  <meta property="article:author" content="https://www.haggath.re/">
   <meta property="og:image"        content="https://www.haggath.re/assets/og-card.jpg">
   <meta property="og:image:width"  content="1200">
   <meta property="og:image:height" content="630">

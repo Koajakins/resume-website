@@ -1,7 +1,7 @@
 ---
 title: "AWS Security Hub: ASFF, Severity Normalisation and Cross-Account Aggregation"
 date: 2026-05-16
-excerpt: "How Security Hub normalises findings from GuardDuty, Macie, and 30+ integrations into a single schema — and what the severity scores actually mean."
+excerpt: "How AWS Security Hub normalises findings from GuardDuty, Macie, and 30+ integrations into ASFF — and what the severity normalisation scores actually mean for triage."
 ---
 
 If you've enabled GuardDuty and Macie in AWS, you already have two separate consoles generating findings in two different formats with two different severity scales. Add Inspector, Config, and a third-party SIEM integration and the problem compounds quickly. Security Hub exists to solve that.

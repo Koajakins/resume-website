@@ -1,7 +1,7 @@
 ---
 title: "Leveraging Macie suppression rules to eliminate noise"
 date: 2026-05-10
-excerpt: "How to use suppression rules, allow lists, and finding filters to reduce Amazon Macie alert noise."
+excerpt: "How to reduce Amazon Macie alert noise using suppression rules, allow lists, and finding filters — practical examples for AWS security engineers managing S3 data findings."
 ---
 
 ## What is Amazon Macie?

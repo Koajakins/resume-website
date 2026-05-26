@@ -1,7 +1,7 @@
 ---
 title: "GuardDuty Suppression Rules: Reduce Alert Noise on AWS"
 date: 2026-05-10
-excerpt: "How to use suppression rules, trusted IP lists, and threat intel lists to reduce GuardDuty alert noise."
+excerpt: "How to cut GuardDuty alert noise using suppression rules, trusted IP lists, and threat intel lists — with real-world finding type examples for AWS security teams."
 ---
 
 ## What is GuardDuty?
