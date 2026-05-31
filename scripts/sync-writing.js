@@ -8,7 +8,7 @@ const path = require("path");
 
 const POSTS_DIR = path.join(__dirname, "../blog/src/posts");
 const INDEX_FILE = path.join(__dirname, "../index.html");
-const MAX_POSTS = 3;
+const MAX_POSTS = 5;
 
 function parseFrontmatter(content) {
   const match = content.replace(/\r\n/g, "\n").match(/^---\n([\s\S]*?)\n---/);
