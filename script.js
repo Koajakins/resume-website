@@ -274,8 +274,8 @@ document.querySelectorAll('.copy-btn').forEach(btn => {
         status.textContent = msg;
         status.classList.add('error');
       }
-    } catch {
-      status.textContent = 'Something went wrong. Please try again.';
+    } catch (err) {
+      status.textContent = 'Error: ' + (err && err.message ? err.message : String(err));
       status.classList.add('error');
     } finally {
       status.hidden = false;
