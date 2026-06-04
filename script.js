@@ -274,8 +274,8 @@ document.querySelectorAll('.copy-btn').forEach(btn => {
         status.textContent = msg;
         status.classList.add('error');
       }
-    } catch (err) {
-      status.textContent = err instanceof TypeError ? 'Network error: ' + err.message : 'Parse error: ' + String(err);
+    } catch {
+      status.textContent = 'Something went wrong. Please try again.';
       status.classList.add('error');
     } finally {
       status.hidden = false;
