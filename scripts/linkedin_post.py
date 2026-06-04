@@ -11,6 +11,7 @@ with open(post_file, encoding="utf-8") as f:
 
 title = re.search(r'^title:\s*"?(.+?)"?\s*$', content, re.MULTILINE)
 excerpt = re.search(r'^excerpt:\s*"?(.+?)"?\s*$', content, re.MULTILINE)
+linkedin = re.search(r'^linkedin:\s*\|\n((?:[ \t]+.*\n?)*)', content, re.MULTILINE)
 
 title = title.group(1) if title else ""
 excerpt = excerpt.group(1) if excerpt else ""
@@ -18,7 +19,11 @@ excerpt = excerpt.group(1) if excerpt else ""
 slug = os.path.splitext(os.path.basename(post_file))[0]
 url = f"https://www.haggath.re/blog/{slug}/"
 
-text = f"{title}\n\n{excerpt}\n\n{url}\n\n#AWSsecurity #CloudSecurity #AWS"
+if linkedin:
+    body = re.sub(r'^[ \t]+', '', linkedin.group(1), flags=re.MULTILINE).strip()
+    text = f"{body}\n\n{url}"
+else:
+    text = f"{title}\n\n{excerpt}\n\n{url}\n\n#AWSsecurity #CloudSecurity #AWS"
 
 req = urllib.request.Request(
     "https://api.linkedin.com/v2/userinfo",
