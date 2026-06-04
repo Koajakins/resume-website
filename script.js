@@ -275,7 +275,7 @@ document.querySelectorAll('.copy-btn').forEach(btn => {
         status.classList.add('error');
       }
     } catch (err) {
-      status.textContent = 'Error: ' + (err && err.message ? err.message : String(err));
+      status.textContent = err instanceof TypeError ? 'Network error: ' + err.message : 'Parse error: ' + String(err);
       status.classList.add('error');
     } finally {
       status.hidden = false;
