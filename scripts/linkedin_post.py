@@ -9,19 +9,28 @@ post_file = os.environ["POST_FILE"]
 with open(post_file, encoding="utf-8") as f:
     content = f.read()
 
-title = re.search(r'^title:\s*"?(.+?)"?\s*$', content, re.MULTILINE)
-excerpt = re.search(r'^excerpt:\s*"?(.+?)"?\s*$', content, re.MULTILINE)
-linkedin = re.search(r'^linkedin:\s*\|\n((?:[ \t]+.*\n?)*)', content, re.MULTILINE)
+# Extract frontmatter block between --- delimiters
+fm_match = re.match(r'^---\n(.*?)\n---', content, re.DOTALL)
+fm_text = fm_match.group(1) if fm_match else ""
 
-title = title.group(1) if title else ""
-excerpt = excerpt.group(1) if excerpt else ""
+def fm_scalar(key, text):
+    # Block scalar (key: |)
+    m = re.search(r'^' + key + r':\s*\|\n((?:(?:[ \t].*|)\n)*)', text, re.MULTILINE)
+    if m:
+        return re.sub(r'^[ \t]{2}', '', m.group(1), flags=re.MULTILINE).strip()
+    # Plain / quoted scalar
+    m = re.search(r'^' + key + r':\s*"?(.+?)"?\s*$', text, re.MULTILINE)
+    return m.group(1) if m else ""
+
+title = fm_scalar("title", fm_text)
+excerpt = fm_scalar("excerpt", fm_text)
+linkedin = fm_scalar("linkedin", fm_text)
 
 slug = os.path.splitext(os.path.basename(post_file))[0]
 url = f"https://www.haggath.re/blog/{slug}/"
 
 if linkedin:
-    body = re.sub(r'^[ \t]+', '', linkedin.group(1), flags=re.MULTILINE).strip()
-    text = f"{body}\n\n{url}"
+    text = f"{linkedin}\n\n{url}"
 else:
     text = f"{title}\n\n{excerpt}\n\n{url}\n\n#AWSsecurity #CloudSecurity #AWS"
 
