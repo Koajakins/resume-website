@@ -34,6 +34,8 @@ if linkedin:
 else:
     text = f"{title}\n\n{excerpt}\n\n{url}\n\n#AWSsecurity #CloudSecurity #AWS"
 
+print(f"Post text ({len(text)} chars):\n{text}\n")
+
 req = urllib.request.Request(
     "https://api.linkedin.com/v2/userinfo",
     headers={"Authorization": f"Bearer {token}"},
@@ -62,5 +64,9 @@ req = urllib.request.Request(
         "X-Restli-Protocol-Version": "2.0.0",
     },
 )
-with urllib.request.urlopen(req) as r:
-    print(r.read().decode())
+try:
+    with urllib.request.urlopen(req) as r:
+        print(r.read().decode())
+except urllib.error.HTTPError as e:
+    print(f"HTTP {e.code}: {e.read().decode()}")
+    raise
