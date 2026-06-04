@@ -14,8 +14,8 @@ fm_match = re.match(r'^---\n(.*?)\n---', content, re.DOTALL)
 fm_text = fm_match.group(1) if fm_match else ""
 
 def fm_scalar(key, text):
-    # Block scalar (key: |)
-    m = re.search(r'^' + key + r':\s*\|\n((?:(?:[ \t].*|)\n)*)', text, re.MULTILINE)
+    # Block scalar (key: |) — capture until end of frontmatter text
+    m = re.search(r'^' + key + r':\s*\|\n([\s\S]*?)(?=\n\S|\Z)', text, re.MULTILINE)
     if m:
         return re.sub(r'^[ \t]{2}', '', m.group(1), flags=re.MULTILINE).strip()
     # Plain / quoted scalar
@@ -30,7 +30,7 @@ slug = os.path.splitext(os.path.basename(post_file))[0]
 url = f"https://www.haggath.re/blog/{slug}/"
 
 if linkedin:
-    text = f"{linkedin}\n\n{url}"
+    text = f"{linkedin}\n\nFull post: {url}"
 else:
     text = f"{title}\n\n{excerpt}\n\n{url}\n\n#AWSsecurity #CloudSecurity #AWS"
 
