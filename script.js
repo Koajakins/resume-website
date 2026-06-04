@@ -250,7 +250,6 @@ document.querySelectorAll('.copy-btn').forEach(btn => {
     e.preventDefault();
 
     const formData = new FormData(form);
-    const payload = Object.fromEntries(formData);
 
     const originalText = submitBtn.textContent;
     submitBtn.textContent = 'Sending\u2026';
@@ -261,8 +260,8 @@ document.querySelectorAll('.copy-btn').forEach(btn => {
     try {
       const response = await fetch('https://formspree.io/f/maqlarpj', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify(payload),
+        headers: { Accept: 'application/json' },
+        body: formData,
       });
       const data = await response.json();
 
