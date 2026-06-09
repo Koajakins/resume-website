@@ -1,7 +1,13 @@
 ---
 title: "Leveraging Amazon EventBridge to invoke Security Automation"
 date: 2026-05-22
+updated: 2026-06-09
 excerpt: "How to use Amazon EventBridge rules to capture GuardDuty, Macie, and Security Hub events and automatically invoke Lambda, Step Functions, or SSM remediation workflows."
+faqs:
+  - question: "What is Amazon EventBridge?"
+    answer: "Amazon EventBridge is a serverless event bus that receives structured JSON events from AWS services and routes them to targets you define — Lambda functions, Step Functions workflows, SNS topics, and more — based on rules you configure. Every AWS account has a default event bus that AWS services publish to automatically."
+  - question: "How does EventBridge enable security automation?"
+    answer: "When a security service like GuardDuty generates a finding, it emits a structured JSON event to EventBridge. A rule evaluates the event pattern and, if it matches, invokes up to five targets simultaneously — enabling automated enrichment, ticketing, or remediation in seconds without analyst intervention."
 ---
 
 GuardDuty identifies threats. Macie surfaces sensitive data exposure. Security Hub aggregates findings across both. None of them act on what they find by default — that part is on you.

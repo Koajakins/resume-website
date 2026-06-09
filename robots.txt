@@ -17,5 +17,9 @@ Allow: /
 User-agent: anthropic-ai
 Allow: /
 
+# Training-only crawler (Common Crawl) — no citation value
+User-agent: CCBot
+Disallow: /
+
 Sitemap: https://www.haggath.re/sitemap.xml
 Sitemap: https://www.haggath.re/blog/sitemap.xml

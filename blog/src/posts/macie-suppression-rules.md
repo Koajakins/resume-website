@@ -1,7 +1,15 @@
 ---
 title: "Leveraging Macie suppression rules to eliminate noise"
 date: 2026-05-10
+updated: 2026-06-09
 excerpt: "How to reduce Amazon Macie alert noise using suppression rules, allow lists, and finding filters — practical examples for AWS security engineers managing S3 data findings."
+faqs:
+  - question: "What is Amazon Macie?"
+    answer: "Amazon Macie is a fully managed data security service that uses machine learning to automatically discover, classify, and protect sensitive data in Amazon S3, covering PII, financial data, credentials, and custom data types you define."
+  - question: "What is a Macie suppression rule?"
+    answer: "A Macie suppression rule is a saved filter that automatically archives matching findings at generation time, removing them from your active queue without deleting them. Suppressed findings are not forwarded to Security Hub or EventBridge and are stored for 90 days."
+  - question: "What types of findings does Amazon Macie generate?"
+    answer: "Macie generates two categories of findings: policy findings for bucket misconfigurations such as public access or disabled encryption, and sensitive data findings for actual sensitive content detected inside S3 objects such as PII, financial data, or credentials."
 ---
 
 ## What is Amazon Macie?

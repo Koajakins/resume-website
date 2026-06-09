@@ -1,7 +1,13 @@
 ---
 title: "AWS Security Hub: ASFF, Severity Normalisation and Cross-Account Aggregation"
 date: 2026-05-16
+updated: 2026-06-09
 excerpt: "How AWS Security Hub normalises findings from GuardDuty, Macie, and 30+ integrations into ASFF — and what the severity normalisation scores actually mean for triage."
+faqs:
+  - question: "What is AWS Security Hub?"
+    answer: "AWS Security Hub is a managed security service that aggregates findings from 30+ integrations including GuardDuty, Macie, and Inspector into a single place, translates them into the Amazon Security Finding Format (ASFF), and provides one API and console to query across all of them. It does not detect threats itself."
+  - question: "What is the Amazon Security Finding Format (ASFF)?"
+    answer: "The Amazon Security Finding Format (ASFF) is the standardised JSON schema that every Security Hub integration must map its findings to. It gives every finding from every source the same set of fields — including severity, affected resource, finding type, and workflow state — making cross-service querying and filtering possible."
 ---
 
 If you've enabled GuardDuty and Macie in AWS, you already have two separate consoles generating findings in two different formats with two different severity scales. Add Inspector, Config, and a third-party SIEM integration and the problem compounds quickly. Security Hub exists to solve that.

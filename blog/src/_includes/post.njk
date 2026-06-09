@@ -43,13 +43,34 @@ layout: base.njk
   }
 }
 </script>
+{% if faqs %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {% for faq in faqs %}
+    {
+      "@type": "Question",
+      "name": {{ faq.question | dump | safe }},
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": {{ faq.answer | dump | safe }}
+      }
+    }{% if not loop.last %},{% endif %}
+
+    {% endfor %}
+  ]
+}
+</script>
+{% endif %}
 <div class="blog-prose">
   <a href="/blog/" class="back-link">
     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
     All posts
   </a>
   <h1>{{ title }}</h1>
-  <p class="post-meta"><time datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time> &middot; {{ content | readingTime }} min read</p>
+  <p class="post-meta"><time datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time>{% if updated %} &middot; Updated <time datetime="{{ updated | htmlDateString }}">{{ updated | readableDate }}</time>{% endif %} &middot; {{ content | readingTime }} min read</p>
   {{ content | safe }}
   {% set postList = collections.posts %}
   {% set currentIndex = 0 %}

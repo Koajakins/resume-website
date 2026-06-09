@@ -6,7 +6,7 @@
 > Open to U.S. cloud security roles. H-1B and L-1 sponsorship available.
 
 ## About
-- Last updated: 2026-05-26
+- Last updated: 2026-06-09
 - Full name: Thomas Haggath
 - Role: Senior Cloud Security Engineer
 - Employer: Amazon Web Services (Amazon Managed Services)
@@ -42,10 +42,13 @@
 - A-LiME — Python tooling for automated cross-compilation of Linux kernel modules and memory extraction with ADB integration — https://github.com/Koalatyyy/A-LiME
 
 ## Writing
-- Leveraging GuardDuty suppression rules to eliminate noise — https://www.haggath.re/blog/guardduty-suppression-rules/
+- GuardDuty Suppression Rules: Reduce Alert Noise on AWS — https://www.haggath.re/blog/guardduty-suppression-rules/
 - Leveraging Macie suppression rules to eliminate noise — https://www.haggath.re/blog/macie-suppression-rules/
 - Leveraging Amazon EventBridge to invoke Security Automation — https://www.haggath.re/blog/leveraging-eventbridge-for-security-automation/
-- Understanding Security Hub: ASFF, severity normalisation, and cross-account aggregation — https://www.haggath.re/blog/security-hub-aggregation-severity/
+- AWS Security Hub: ASFF, Severity Normalisation and Cross-Account Aggregation — https://www.haggath.re/blog/security-hub-aggregation-severity/
+- AWS Config rules, conformance packs, and the operational details that matter — https://www.haggath.re/blog/aws-config-rules/
+- Amazon Inspector: coverage, finding lifecycle, and severity scoring — https://www.haggath.re/blog/inspector-vulnerability-scanning/
+- Network-based malware detection: what you can see from flow data alone — https://www.haggath.re/blog/network-flow-malware-detection/
 - dev.to: AWS security, detection engineering, and cloud defence — https://dev.to/haggath
 
 ## Availability

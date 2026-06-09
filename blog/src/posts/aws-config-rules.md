@@ -1,6 +1,7 @@
 ---
 title: "AWS Config rules, conformance packs, and the operational details that matter"
 date: 2026-05-22
+updated: 2026-06-09
 excerpt: "A practitioner-focused look at AWS Config rule types, evaluation mechanics, conformance pack deployment, and the cost and correctness traps that catch teams off guard."
 eleventyExcludeFromCollections: true
 noindex: true

@@ -1,7 +1,15 @@
 ---
 title: "GuardDuty Suppression Rules: Reduce Alert Noise on AWS"
 date: 2026-05-10
+updated: 2026-06-09
 excerpt: "How to cut GuardDuty alert noise using suppression rules, trusted IP lists, and threat intel lists — with real-world finding type examples for AWS security teams."
+faqs:
+  - question: "What is Amazon GuardDuty?"
+    answer: "Amazon GuardDuty is a continuous threat detection service that monitors AWS accounts, workloads, and data by analysing CloudTrail events, VPC Flow Logs, and DNS query logs. It uses threat intelligence feeds and machine learning to identify suspicious activity without requiring agents or additional security software."
+  - question: "What is a GuardDuty suppression rule?"
+    answer: "A GuardDuty suppression rule is a filter that automatically archives matching findings — silencing known-good activity without deleting the record. Suppressed findings are stored for 90 days but excluded from Security Hub, EventBridge, and S3 exports, so your downstream integrations stay quiet."
+  - question: "What is the difference between a GuardDuty trusted IP list and a suppression rule?"
+    answer: "Trusted IP lists prevent findings from being generated at all; suppression rules generate the finding and immediately archive it. Suppressed findings are stored for 90 days and remain queryable, giving you an audit trail that trusted lists do not. Use trusted lists for stable, known-good source IPs; use suppression rules for resource- or tag-scoped noise."
 ---
 
 ## What is GuardDuty?
