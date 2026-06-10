@@ -391,6 +391,52 @@ section {
   50%       { transform: translateX(-50%) translateY(7px); }
 }
 
+/* ─── At-a-glance strip ────────────────────────────────────────────────────── */
+
+#glance {
+  background-color: var(--bg-alt);
+  padding-block: 2rem;
+}
+
+.glance-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem 1.5rem;
+}
+
+.glance-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.glance-label {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.glance-value {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+}
+
+.glance-value strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .glance-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ─── About ─────────────────────────────────────────────────────────────────── */
+
 #about {
   background-color: var(--bg-alt);
 }
