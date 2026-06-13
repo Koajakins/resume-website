@@ -1,13 +1,11 @@
 ---
 title: "AWS Config rules, conformance packs, and the operational details that matter"
-date: 2026-05-22
-updated: 2026-06-09
-excerpt: "A practitioner-focused look at AWS Config rule types, evaluation mechanics, conformance pack deployment, and the cost and correctness traps that catch teams off guard."
-eleventyExcludeFromCollections: true
-noindex: true
+date: 2026-06-13
+updated: 2026-06-13
+excerpt: "A practitioner look at AWS Config rule types, evaluation mechanics, conformance pack deployment, and the cost and correctness traps teams run into."
 ---
 
-AWS Config evaluates resource configurations against rules you define, recording compliance state as a time-series alongside configuration history. It is a continuous assessment system, not a real-time enforcement layer. That distinction matters when you are deciding what to build on top of it.
+AWS Config evaluates resource configurations against rules you define, recording compliance state as a time-series alongside configuration history. It is a continuous assessment system, not a real-time enforcement layer. The difference matters the moment you start building workflows on top of it.
 
 ## Rule types and when each applies
 
@@ -15,7 +13,7 @@ Config rules come in four categories: managed, custom Lambda, custom Guard (poli
 
 Managed rules cover the most common controls and come with predefined parameter defaults. Those defaults only populate in the console. If you deploy via CLI, API, or SDK, you supply all parameter values yourself. Teams that automate rule deployment without auditing what the managed rule actually requires hit this regularly.
 
-Custom Lambda rules give you full flexibility but carry two non-obvious operational requirements. First, scope the rule to explicit resource types. An unscoped custom Lambda rule invokes the function for every resource in the account. In a large account, that invocation count adds up fast and you will hit throttling before the cost is obvious. Second, return `NOT_APPLICABLE` for deleted resources. If you skip this, evaluation results for deleted resources persist unchanged until you delete the rule. When you do delete it, Config creates CIs for `AWS::Config::ResourceCompliance` for every stale result — a sudden spike in recorded CIs that shows up directly in your bill.
+Custom Lambda rules are flexible but carry two non-obvious operational requirements. First, scope the rule to explicit resource types. An unscoped custom Lambda rule invokes the function for every resource in the account. In a large account, that invocation count climbs fast and you will hit throttling before you notice the cost. Second, return `NOT_APPLICABLE` for deleted resources. If you skip this, evaluation results for deleted resources persist unchanged until you delete the rule. When you do delete it, Config creates CIs for `AWS::Config::ResourceCompliance` for every stale result, a sudden spike in recorded CIs that shows up directly in your bill.
 
 ## How evaluation triggering works
 
@@ -54,7 +52,6 @@ The finding structure below is representative of what Config returns for a non-c
 }
 ```
 
-Key fields to note:
 - `EvaluationMode`: distinguishes `DETECTIVE` (after-the-fact) from `PROACTIVE` (pre-provisioning) results; the same rule can produce both types.
 - `OrderingTimestamp`: the time of the configuration change that triggered evaluation, not the time the evaluation completed. Use this for sequencing when correlating with CloudTrail.
 - `ConfigRuleInvokedTime` vs `ResultRecordedTime`: the delta reveals evaluation processing latency for the specific rule.
@@ -69,7 +66,7 @@ The YAML template references either managed rule identifiers or custom rule Lamb
 
 Compliance visibility works at two levels: individual rule results, and an aggregate conformance pack compliance score reflecting the percentage of rules with at least one compliant resource. The dashboard surfaces both.
 
-## Custom rules vs. managed rules: key operational differences
+## Custom rules vs. managed rules: operational differences
 
 | Dimension | Managed rules | Custom Lambda rules |
 |---|---|---|
@@ -85,7 +82,7 @@ Compliance visibility works at two levels: individual rule results, and an aggre
 
 Deleting a Config rule is asynchronous and can take an hour or more. During deletion, Config creates CIs for `AWS::Config::ResourceCompliance` for each affected resource. If a rule evaluates a large number of resources, the CI volume spike translates directly to recording costs.
 
-One mitigation: disable recording for `AWS::Config::ResourceCompliance` before deleting rules, then re-enable it after deletion completes. The tradeoff is that while recording is disabled, rule evaluations don't appear in resource history. That gap affects audit trails and any downstream process reading compliance history. Whether that's acceptable depends on your specific rule and resource count.
+One mitigation is to disable recording for `AWS::Config::ResourceCompliance` before deleting rules, then re-enable it after deletion completes. While recording is disabled, rule evaluations don't appear in resource history. That breaks audit trails and any downstream process reading compliance history. Whether that tradeoff is worth it depends on your rule and resource count.
 
 ## Sending results to Security Hub
 
