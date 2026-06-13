@@ -30,9 +30,9 @@
   --text:         #f1f5f9;
   --text-muted:   #94a3b8;
   --text-subtle:  #6c87ae;
-  --accent:       #38bdf8;
-  --accent-dim:   rgba(56, 189, 248, 0.1);
-  --accent-hover: #7dd3fc;
+  --accent:       #34d399;
+  --accent-dim:   rgba(52, 211, 153, 0.1);
+  --accent-hover: #6ee7b7;
 
   --max-width:    960px;
   --nav-height:   64px;
@@ -995,7 +995,7 @@ footer {
   object-fit: cover;
   object-position: top;
   border: 2px solid var(--border);
-  box-shadow: 0 0 0 6px var(--accent-dim), 0 0 40px rgba(56, 189, 248, 0.08);
+  box-shadow: 0 0 0 6px var(--accent-dim), 0 0 40px rgba(52, 211, 153, 0.08);
 }
 
 @media (max-width: 768px) {
@@ -1383,9 +1383,9 @@ footer {
     --text:         #0f172a;
     --text-muted:   #475569;
     --text-subtle:  #636d7b;
-    --accent:       #0369a1;
-    --accent-dim:   rgba(3, 105, 161, 0.08);
-    --accent-hover: #025e8c;
+    --accent:       #047857;
+    --accent-dim:   rgba(4, 120, 87, 0.08);
+    --accent-hover: #065f46;
   }
 
   :root:not([data-theme="dark"]) #navbar {
