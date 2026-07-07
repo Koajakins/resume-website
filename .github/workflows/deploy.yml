@@ -84,36 +84,19 @@ jobs:
       - name: Build blog
         run: cd blog && npm install && npm run build
 
-      - name: Deploy to OVH via FTP
-        uses: SamKirkland/FTP-Deploy-Action@8e83cea8672e3fbcbb9fdafff34debf6ae4c5f65 # v4.3.5
-        with:
-          server: ${{ secrets.FTP_HOST }}
-          username: ${{ secrets.FTP_USER }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./
-          server-dir: /www/
-          exclude: |
-            **/.git*
-            **/.git*/**
-            **/.github/**
-            **/CLAUDE.md
-            blog/**
-
-      - name: Deploy blog to OVH via FTP
-        uses: SamKirkland/FTP-Deploy-Action@8e83cea8672e3fbcbb9fdafff34debf6ae4c5f65 # v4.3.5
-        with:
-          server: ${{ secrets.FTP_HOST }}
-          username: ${{ secrets.FTP_USER }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./blog/_site/
-          server-dir: /www/blog/
-
-      - name: Purge Cloudflare cache
+      - name: Assemble deploy directory
         run: |
-          curl -s -X POST "https://api.cloudflare.com/client/v4/zones/${{ secrets.CF_ZONE_ID }}/purge_cache" \
-            -H "Authorization: Bearer ${{ secrets.CF_API_TOKEN }}" \
-            -H "Content-Type: application/json" \
-            --data '{"purge_everything":true}'
+          mkdir -p _deploy
+          rsync -a --exclude='.git' --exclude='.github' --exclude='CLAUDE.md' --exclude='blog' . _deploy/
+          mkdir -p _deploy/blog
+          rsync -a blog/_site/ _deploy/blog/
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@da0e0dfe58b7a431659754fdf3f186c529afbe65 # v3.14.1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy _deploy --project-name=resume-website --branch=main
 
       - name: Ping IndexNow
         run: |
