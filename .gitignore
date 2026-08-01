@@ -40,6 +40,4 @@ logs/
 # Local scripts
 scripts/generate-draft.py
 
-package-lock.json
-
 .superpowers/
