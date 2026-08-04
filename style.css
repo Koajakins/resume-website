@@ -1029,18 +1029,9 @@ footer {
   width: fit-content;
 }
 
-.otw-dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: #22c55e;
+.otw-icon {
   flex-shrink: 0;
-  animation: pulse-dot 2s ease-in-out infinite;
-}
-
-@keyframes pulse-dot {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50%       { opacity: 0.5; transform: scale(0.8); }
+  color: #4ade80;
 }
 
 .email-row {
@@ -1109,10 +1100,6 @@ footer {
   .typed-cursor {
     animation: none;
     opacity: 1;
-  }
-
-  .otw-dot {
-    animation: none;
   }
 
   .hero-scroll-hint {
