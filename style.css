@@ -325,7 +325,15 @@ section {
   font-weight: 400;
   color: var(--text-muted);
   min-height: 1.75rem;
-  margin-bottom: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-target-title {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.01em;
+  margin-bottom: 1.25rem;
 }
 
 .hero-bio {
@@ -1630,7 +1638,8 @@ footer {
 
   .hero-title,
   .hero-bio,
-  .hero-greeting {
+  .hero-greeting,
+  .hero-target-title {
     color: #333 !important;
   }
 
